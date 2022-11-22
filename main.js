@@ -27,8 +27,10 @@ fetch("resources/skills.json")
       skillset.innerHTML += `
         <li class="list-group-item">
         <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-normal">${skill.name}</label>
-            <label class="fs-6 fw-light pt-2">${skill.category}</label>
+            <label class="fs-5 fw-bold custom-text-color">${skill.name}</label>
+            <label class="fs-6 fw-normal custom-text-color pt-2">${
+              skill.category
+            }</label>
         </div>
         <span
             ><hr style="width: ${
@@ -48,10 +50,10 @@ fetch("resources/projects.json")
     data.forEach((item, index) => {
       projectItems.innerHTML += `
         <li class="list-group-item">
-            <p class="fs-4 fw-normal">${item.name}</p>
+            <p class="fs-4 fw-bold custom-text-color">${item.name}</p>
             <p>
             <a
-                class="text-decoration-none fw-bold"
+                class="text-decoration-none link-dark fw-bold"
                 data-bs-toggle="collapse"
                 href="#pi${index}"
                 role="button"

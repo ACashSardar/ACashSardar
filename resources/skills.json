@@ -20,6 +20,11 @@
         "rating":40
     },
     {
+        "name":"Bootstrap",
+        "category":"CSS Framework",
+        "rating":70
+    },
+    {
         "name":"MySQL",
         "category":"Database",
         "rating":70
