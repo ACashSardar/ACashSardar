@@ -1,7 +1,18 @@
+const navbar = document.getElementById("navbar");
 const skillset = document.getElementById("skillset");
 const projectItems = document.getElementById("project-items");
-
 const colors = ["limegreen", "blueviolet", "hotpink"];
+
+window.onscroll = () => {
+  if (
+    document.documentElement.scrollTop >= 650 ||
+    (window.innerWidth < 600 && document.documentElement.scrollTop >= 515)
+  ) {
+    navbar.style.background = "#333";
+  } else {
+    navbar.style.background = "rgba(0,0,0,0)";
+  }
+};
 
 function download(e) {
   console.log(e);
@@ -27,8 +38,10 @@ fetch("resources/skills.json")
       skillset.innerHTML += `
         <li class="list-group-item">
         <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-bold custom-text-color">${skill.name}</label>
-            <label class="fs-6 fw-normal custom-text-color pt-2">${
+            <label class="fs-4 fw-normal custom-text-color">${
+              skill.name
+            }</label>
+            <label class="fs-6 fw-light custom-text-color pt-2">${
               skill.category
             }</label>
         </div>
@@ -50,10 +63,10 @@ fetch("resources/projects.json")
     data.forEach((item, index) => {
       projectItems.innerHTML += `
         <li class="list-group-item">
-            <p class="fs-4 fw-bold custom-text-color">${item.name}</p>
+            <p class="fs-4 fw-normal custom-text-color">${item.name}</p>
             <p>
             <a
-                class="text-decoration-none link-dark fw-bold"
+                class="text-decoration-none link-dark fw-normal"
                 data-bs-toggle="collapse"
                 href="#pi${index}"
                 role="button"
@@ -65,7 +78,7 @@ fetch("resources/projects.json")
             </a>
             </p>
             <div class="collapse" id="pi${index}">
-            <div class="card card-body mb-2">
+            <div class="card card-body mb-2" style="width:100%">
                 <h5>Key Features:</h5>
                 <p class="fs-6 fw-light">${item.keyFeatures}</p>
 

@@ -1,5 +1,5 @@
 :root {
-  --main-accent-color: grey;
+  --main-accent-color: blueviolet;
 }
 body {
   margin: 0;
@@ -64,11 +64,27 @@ body {
   background: #333;
 }
 
+.navbar {
+  background: rgb(0, 0, 0, 0);
+}
+
+.navbar--scrolled {
+  background-color: grey;
+}
+
 .nav-link {
-  color: var(--main-accent-color);
+  color: lavender;
   font-weight: bold;
   font-size: 1.2rem;
   margin-right: 10px;
+}
+
+.nav-item a:hover {
+  transition: all 0.3s ease-in;
+  color: var(--main-accent-color);
+  text-decoration: underline 5px;
+  text-underline-position: under;
+  text-underline-offset: 25px;
 }
 
 .list-group-item:hover {
@@ -79,7 +95,7 @@ body {
 footer {
   height: 10vh;
   background-color: #333;
-  padding-top: 10px;
+  padding-top: 15px;
   color: white;
   font-size: 1rem;
   display: flex;
@@ -100,9 +116,9 @@ footer {
   }
 
   .my-btn {
-    left: 5vw;
+    left: 4vw;
     padding: 5px;
-    font-weight: bold;
+    font-weight: 100;
   }
 
   .card,
