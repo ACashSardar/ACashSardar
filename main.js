@@ -1,7 +1,6 @@
 const skillset = document.getElementById("skillset");
-const projects = document.getElementById("projects");
+const projectItems = document.getElementById("project-items");
 
-let projectItems = [];
 const colors = ["limegreen", "blueviolet", "hotpink"];
 
 function download(e) {
@@ -14,6 +13,13 @@ function download(e) {
   document.body.removeChild(link);
 }
 
+function changeArrow(e) {
+  if (e.innerHTML.includes("up")) {
+    e.innerHTML = `Show Details <i class="fa fa-caret-down"></i>`;
+  } else {
+    e.innerHTML = `Hide Details <i class="fa fa-caret-up"></i>`;
+  }
+}
 fetch("resources/skills.json")
   .then((res) => res.json())
   .then((data) => {
@@ -21,7 +27,7 @@ fetch("resources/skills.json")
       skillset.innerHTML += `
         <li class="list-group-item">
         <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-light">${skill.name}</label>
+            <label class="fs-5 fw-normal">${skill.name}</label>
             <label class="fs-6 fw-light pt-2">${skill.category}</label>
         </div>
         <span
@@ -39,9 +45,33 @@ fetch("resources/skills.json")
 fetch("resources/projects.json")
   .then((res) => res.json())
   .then((data) => {
-    projectItems = data;
+    data.forEach((item, index) => {
+      projectItems.innerHTML += `
+        <li class="list-group-item">
+            <p class="fs-4 fw-normal">${item.name}</p>
+            <p>
+            <a
+                class="text-decoration-none fw-bold"
+                data-bs-toggle="collapse"
+                href="#pi${index}"
+                role="button"
+                aria-expanded="false"
+                aria-controls="pi${index}"
+                onClick="changeArrow(this)"
+            >
+                Show Details <i class="fa fa-caret-down"></i>
+            </a>
+            </p>
+            <div class="collapse" id="pi${index}">
+            <div class="card card-body mb-2">
+                <h5>Key Features:</h5>
+                <p class="fs-6 fw-light">${item.keyFeatures}</p>
 
-    projectItems.forEach((pi) => {
-      projects.innerHTML += pi.name + " " + pi.desc + "<br>";
+                <h5>Tools and technologies</h5>
+                <p class="fs-6 fw-light">${item.technologies}</p>
+            </div>
+            </div>
+        </li>
+        `;
     });
   });
