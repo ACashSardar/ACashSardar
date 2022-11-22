@@ -5,7 +5,7 @@ const colors = ["limegreen", "blueviolet", "hotpink"];
 
 window.onscroll = () => {
   if (
-    document.documentElement.scrollTop >= 650 ||
+    document.documentElement.scrollTop >= 700 ||
     (window.innerWidth < 600 && document.documentElement.scrollTop >= 515)
   ) {
     navbar.style.background = "#333";

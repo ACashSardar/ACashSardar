@@ -11,7 +11,7 @@ body {
   color: var(--main-accent-color);
 }
 #introduction {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -116,7 +116,7 @@ footer {
   }
 
   .my-btn {
-    left: 4vw;
+    left: 2vw;
     padding: 5px;
     font-weight: 100;
   }
