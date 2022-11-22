@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Java",
+        "category":"Programming language",
+        "rating":80
+    },
+    {
+        "name":"JavaScript",
+        "category":"Programming language",
+        "rating":50
+    },
+    {
+        "name":"Spring Boot",
+        "category":"Backend Framework",
+        "rating":60
+    },
+    {
+        "name":"React JS",
+        "category":"Frontend Library",
+        "rating":40
+    },
+    {
+        "name":"MySQL",
+        "category":"Database",
+        "rating":70
+    }
+]

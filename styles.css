@@ -1,0 +1,59 @@
+#introduction {
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(https://wallpaperaccess.com/full/1558955.jpg);
+}
+
+#introduction .my-name,
+.my-desc {
+  color: white;
+  font-size: 6rem;
+  font-family: Calibri Light;
+  position: relative;
+  top: 22vh;
+}
+
+.my-name {
+  padding-left: 12vw;
+}
+
+.my-desc {
+  padding-left: 12vw;
+  font-size: 2rem;
+  color: lightseagreen;
+}
+.my-btn {
+  position: relative;
+  top: 30vh;
+  left: 60vw;
+  background: lightseagreen;
+  border: 1px solid lightseagreen;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.my-btn:hover {
+  background: white;
+  border: 2px solid lightseagreen;
+  color: black;
+}
+.custom-navbar {
+  background: #333;
+}
+
+.nav-link {
+  color: lightseagreen;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.list-group-item:hover {
+  background: whitesmoke;
+  transition: all 0.3s ease;
+}
