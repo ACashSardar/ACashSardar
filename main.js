@@ -4,10 +4,7 @@ const projectItems = document.getElementById("project-items");
 const colors = ["limegreen", "blueviolet", "hotpink"];
 
 window.onscroll = () => {
-  if (
-    document.documentElement.scrollTop >= 700 ||
-    (window.innerWidth < 600 && document.documentElement.scrollTop >= 515)
-  ) {
+  if (document.documentElement.scrollTop >= 700 || window.innerWidth < 600) {
     navbar.style.background = "#333";
   } else {
     navbar.style.background = "rgba(0,0,0,0)";
@@ -41,9 +38,7 @@ fetch("resources/skills.json")
             <label class="fs-4 fw-normal custom-text-color">${
               skill.name
             }</label>
-            <label class="fs-6 fw-light custom-text-color pt-2">${
-              skill.category
-            }</label>
+            <label class="fs-6 fw-light pt-2">${skill.category}</label>
         </div>
         <span
             ><hr style="width: ${
@@ -66,7 +61,7 @@ fetch("resources/projects.json")
             <p class="fs-4 fw-normal custom-text-color">${item.name}</p>
             <p>
             <a
-                class="text-decoration-none link-dark fw-normal"
+                class="text-decoration-none link-dark fw-light"
                 data-bs-toggle="collapse"
                 href="#pi${index}"
                 role="button"
