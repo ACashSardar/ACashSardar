@@ -33,7 +33,7 @@ fetch("resources/skills.json")
   .then((data) => {
     data.forEach((skill, index) => {
       skillset.innerHTML += `
-        <li class="list-group-item">
+        <li class="list-group-item rounded-0">
         <div class="d-flex justify-content-between">
             <label class="fs-4 fw-normal custom-text-color">${
               skill.name
@@ -57,7 +57,7 @@ fetch("resources/projects.json")
   .then((data) => {
     data.forEach((item, index) => {
       projectItems.innerHTML += `
-        <li class="list-group-item">
+        <li class="list-group-item rounded-0">
             <p class="fs-4 fw-normal custom-text-color">${item.name}</p>
             <p>
             <a
@@ -79,6 +79,24 @@ fetch("resources/projects.json")
 
                 <h5>Tools and technologies</h5>
                 <p class="fs-6 fw-light">${item.technologies}</p>
+
+                <h5>GitHub Link</h5>
+                <div class="d-flex flex-column mb-2">
+                ${item.githubLink
+                  .map(
+                    (e, index) =>
+                      `<a href=${e.link} target="_blank" class="me-2">${e.link}</a>`
+                  )
+                  .join("")}
+                </div>
+                
+                ${
+                  item.websiteLink !== ""
+                    ? `<h5>Website Link</h5>
+                    <a href=${item.websiteLink} target="_blank" class="fs-6 fw-light">${item.websiteLink}</a>`
+                    : ""
+                }
+
             </div>
             </div>
         </li>

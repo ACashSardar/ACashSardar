@@ -2,16 +2,41 @@
     {
         "name":"Fullstack E-Commerce Website",
         "keyFeatures":"“No-reload UI”, Basic Authentication(Email ID, Password),Role-based authorization( Customer, Admin, Delivery person),Category based filtering, Editable Shopping cart",
-        "technologies":"Java, Spring Boot, Spring Security, React JS,Bootstrap CSS, MySQL, Postman API client, Spring tool suite, VS code."
+        "technologies":"Java, Spring Boot, Spring Security, React JS,Bootstrap CSS, MySQL, Postman API client, Spring tool suite, VS code.",
+        "projectDetailsLink":"",
+        "githubLink":[
+            {
+                "link":"https://github.com/ACashSardar/E-commerce-website-Front-end.git"
+            },
+            {
+                "link":"https://github.com/ACashSardar/E-commerce-website-Back-end.git"
+            }
+        ],
+        "websiteLink":""
+
     },
     {
         "name":"Travel Blog Website",
         "keyFeatures":"Basic Authentication, Role-based authorization, Posts with Like and Comment features, Pagination & sorting, Markdown feature for formatting texts, and Admin dashboard for managing users and posts.",
-        "technologies":"Java, Spring Boot, Spring Security, JavaScript,Thymeleaf template, Bootstrap CSS, MySQL, Spring tool suite."
+        "technologies":"Java, Spring Boot, Spring Security, JavaScript,Thymeleaf template, Bootstrap CSS, MySQL, Spring tool suite.",
+        "projectDetailsLink":"",
+        "githubLink":[
+            {
+                "link":"https://github.com/ACashSardar/SpringBoot-blog-application.git"
+            }
+        ],
+        "websiteLink":""
     },
     {
         "name":"News Website",
         "keyFeatures":"“No-reload UI”, News updates, Searching & filtering based on news category, news channel, etc., On-demand weather report.",
-        "technologies":"Bootstrap, CSS, JavaScript, ReactJS, ExpressJS, News API from newsapi.org and Weather API from openweathermap.org."
+        "technologies":"Bootstrap, CSS, JavaScript, ReactJS, ExpressJS, News API from newsapi.org and Weather API from openweathermap.org.",
+        "projectDetailsLink":"",
+        "githubLink":[
+            {
+                "link":"https://github.com/ACashSardar/Reactjs-news-website.git"
+            }
+        ],
+        "websiteLink":"https://react-news-app-akash.netlify.app"
     }
 ]
