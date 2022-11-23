@@ -1,13 +1,16 @@
 const navbar = document.getElementById("navbar");
 const skillset = document.getElementById("skillset");
 const projectItems = document.getElementById("project-items");
+const experienceItems = document.getElementById("experience-items");
 const colors = ["limegreen", "blueviolet", "hotpink"];
 
 window.onscroll = () => {
-  if (document.documentElement.scrollTop >= 700 || window.innerWidth < 600) {
+  if (document.documentElement.scrollTop >= 680 || window.innerWidth < 600) {
     navbar.style.background = "#333";
+    navbar.style.borderBottom = "0px";
   } else {
-    navbar.style.background = "rgba(0,0,0,0)";
+    navbar.style.background = "rgba(0,0,0,0.5)";
+    navbar.style.borderBottom = "1px solid white";
   }
 };
 
@@ -28,6 +31,27 @@ function changeArrow(e) {
     e.innerHTML = `Hide Details <i class="fa fa-caret-up"></i>`;
   }
 }
+
+fetch("resources/experience.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((exp, index) => {
+      experienceItems.innerHTML += `
+        <li class="list-group-item rounded-0">
+        <div class="d-flex justify-content-between">
+            <label class="fs-4 fw-normal custom-text-color">${
+              exp.company
+            }</label>
+            <label class="fs-6 fw-light pt-2">${
+              exp.duration + ", " + exp.location
+            }</label>
+        </div>
+          <p class="fs-6 fw-light mb-0">${exp.role}</p>
+        </li>
+      `;
+    });
+  });
+
 fetch("resources/skills.json")
   .then((res) => res.json())
   .then((data) => {
@@ -80,12 +104,19 @@ fetch("resources/projects.json")
                 <h5>Tools and technologies</h5>
                 <p class="fs-6 fw-light">${item.technologies}</p>
 
+                <h5>Documentation Link</h5>
+                <a href=${
+                  item.projectDetailsLink
+                } target="_blank" class="fs-6 fw-light mb-2">${
+        item.projectDetailsLink
+      }</a>
+
                 <h5>GitHub Link</h5>
                 <div class="d-flex flex-column mb-2">
                 ${item.githubLink
                   .map(
                     (e, index) =>
-                      `<a href=${e.link} target="_blank" class="me-2">${e.link}</a>`
+                      `<a href=${e.link} target="_blank" class="class="fs-6 fw-light me-2">${e.link}</a>`
                   )
                   .join("")}
                 </div>

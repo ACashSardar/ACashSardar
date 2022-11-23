@@ -19,7 +19,7 @@
         "name":"Travel Blog Website",
         "keyFeatures":"Basic Authentication, Role-based authorization, Posts with Like and Comment features, Pagination & sorting, Markdown feature for formatting texts, and Admin dashboard for managing users and posts.",
         "technologies":"Java, Spring Boot, Spring Security, JavaScript,Thymeleaf template, Bootstrap CSS, MySQL, Spring tool suite.",
-        "projectDetailsLink":"",
+        "projectDetailsLink":"https://docs.google.com/document/d/1Nqo3lQU2JOh6qFNYMhxA7VSPhTUenwYc2WP43oJuVoQ/edit?usp=sharing",
         "githubLink":[
             {
                 "link":"https://github.com/ACashSardar/SpringBoot-blog-application.git"
