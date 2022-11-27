@@ -44,11 +44,11 @@ fetch("resources/education.json")
         </div >
         <div class="d-flex justify-content-between">
           <p class="fs-6 fw-light mb-0">${edu.degree}</p>
-          <p class="fs-6 fw-light mb-0">${edu.duration}</p>
+          <p class="fs-6 fw-normal mb-0">${edu.score}</p>
         </div>
         <div class="d-flex justify-content-between">
           <p class="fs-6 fw-light mb-0">${edu.branch}</p>
-          <p class="fs-6 fw-normal mb-0">${edu.score}</p>
+          <p class="fs-6 fw-light mb-0">${edu.duration}</p>
         </div>
         </li>
       `;
