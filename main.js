@@ -2,22 +2,22 @@ const navbar = document.getElementById("navbar");
 const skillset = document.getElementById("skillset");
 const projectItems = document.getElementById("project-items");
 const experienceItems = document.getElementById("experience-items");
-const colors = ["limegreen", "blueviolet", "hotpink"];
+const educationItems = document.getElementById("education-items");
+const errorMsg = document.getElementById("error-msg");
+
+const colors = ["darkcyan", "lime", "orangered"];
 
 window.onscroll = () => {
   if (document.documentElement.scrollTop >= 680 || window.innerWidth < 600) {
     navbar.style.background = "#333";
-    navbar.style.borderBottom = "0px";
   } else {
     navbar.style.background = "rgba(0,0,0,0.5)";
-    navbar.style.borderBottom = "1px solid white";
   }
 };
 
 function download(e) {
-  console.log(e);
   var link = document.createElement("a");
-  link.href = "./resources/resume.pdf";
+  link.href = "./resources/Resume_Akash.pdf";
   link.download = "resume_Akash_Sardar.pdf";
   document.body.appendChild(link);
   link.click();
@@ -32,6 +32,29 @@ function changeArrow(e) {
   }
 }
 
+fetch("resources/education.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((edu, index) => {
+      educationItems.innerHTML += `
+        <li class="list-group-item rounded-0">
+        <div class="d-flex justify-content-between">
+            <label class="fs-5 fw-normal custom-text-color">${edu.institutionName}</label>
+            <label class="fs-6 fw-light pt-2">${edu.institutionType}</label>
+        </div >
+        <div class="d-flex justify-content-between">
+          <p class="fs-6 fw-light mb-0">${edu.degree}</p>
+          <p class="fs-6 fw-light mb-0">${edu.duration}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="fs-6 fw-light mb-0">${edu.branch}</p>
+          <p class="fs-6 fw-normal mb-0">${edu.score}</p>
+        </div>
+        </li>
+      `;
+    });
+  });
+
 fetch("resources/experience.json")
   .then((res) => res.json())
   .then((data) => {
@@ -39,14 +62,14 @@ fetch("resources/experience.json")
       experienceItems.innerHTML += `
         <li class="list-group-item rounded-0">
         <div class="d-flex justify-content-between">
-            <label class="fs-4 fw-normal custom-text-color">${
+            <label class="fs-5 fw-normal custom-text-color">${
               exp.company
             }</label>
             <label class="fs-6 fw-light pt-2">${
               exp.duration + ", " + exp.location
             }</label>
         </div>
-          <p class="fs-6 fw-light mb-0">${exp.role}</p>
+          <p class="fs-6 fw-light mb-0">Role: ${exp.role}</p>
         </li>
       `;
     });
@@ -59,7 +82,7 @@ fetch("resources/skills.json")
       skillset.innerHTML += `
         <li class="list-group-item rounded-0">
         <div class="d-flex justify-content-between">
-            <label class="fs-4 fw-normal custom-text-color">${
+            <label class="fs-5 fw-normal custom-text-color">${
               skill.name
             }</label>
             <label class="fs-6 fw-light pt-2">${skill.category}</label>
@@ -67,9 +90,7 @@ fetch("resources/skills.json")
         <span
             ><hr style="width: ${
               skill.rating
-            }%; height: 5px; border:5px solid ${
-        colors[index % colors.length]
-      }; background: ${colors[index % colors.length]}; border-radius:5px"
+            }%; height: 2px; border:2px solid ${"white"}; background: ${"white"}; border-radius:5px; margin:2px"
         /></span>
         </li>
       `;
@@ -79,41 +100,43 @@ fetch("resources/skills.json")
 fetch("resources/projects.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((item, index) => {
+    data.forEach((project, index) => {
       projectItems.innerHTML += `
         <li class="list-group-item rounded-0">
-            <p class="fs-4 fw-normal custom-text-color">${item.name}</p>
-            <p>
-            <a
-                class="text-decoration-none link-dark fw-light"
-                data-bs-toggle="collapse"
-                href="#pi${index}"
-                role="button"
-                aria-expanded="false"
-                aria-controls="pi${index}"
-                onClick="changeArrow(this)"
-            >
-                Show Details <i class="fa fa-caret-down"></i>
-            </a>
-            </p>
+            <label class="fs-5 fw-normal custom-text-color">${
+              project.name
+            }</label><br>
+            <label>
+              <a
+                  class="text-decoration-none link-light fw-light"
+                  data-bs-toggle="collapse"
+                  href="#pi${index}"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="pi${index}"
+                  onClick="changeArrow(this)"
+              >
+                  Show Details <i class="fa fa-caret-down"></i>
+              </a>
+            </label>
             <div class="collapse" id="pi${index}">
-            <div class="card card-body mb-2" style="width:100%">
+            <div class="card text-light bg-dark card-body mb-2" style="width:100%">
                 <h5>Key Features:</h5>
-                <p class="fs-6 fw-light">${item.keyFeatures}</p>
+                <p class="fs-6 fw-light">${project.keyFeatures}</p>
 
                 <h5>Tools and technologies</h5>
-                <p class="fs-6 fw-light">${item.technologies}</p>
+                <p class="fs-6 fw-light">${project.technologies}</p>
 
                 <h5>Documentation Link</h5>
                 <a href=${
-                  item.projectDetailsLink
+                  project.projectDetailsLink
                 } target="_blank" class="fs-6 fw-light mb-2">${
-        item.projectDetailsLink
+        project.projectDetailsLink
       }</a>
 
                 <h5>GitHub Link</h5>
                 <div class="d-flex flex-column mb-2">
-                ${item.githubLink
+                ${project.githubLink
                   .map(
                     (e, index) =>
                       `<a href=${e.link} target="_blank" class="class="fs-6 fw-light me-2">${e.link}</a>`
@@ -122,9 +145,9 @@ fetch("resources/projects.json")
                 </div>
                 
                 ${
-                  item.websiteLink !== ""
+                  project.websiteLink !== ""
                     ? `<h5>Website Link</h5>
-                    <a href=${item.websiteLink} target="_blank" class="fs-6 fw-light">${item.websiteLink}</a>`
+                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light">${project.websiteLink}</a>`
                     : ""
                 }
 
@@ -134,3 +157,38 @@ fetch("resources/projects.json")
         `;
     });
   });
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const subject = e.target.subject.value;
+  const body = e.target.body.value;
+
+  sendEmail(name, email, subject, body, () => {
+    e.target.name.value = "";
+    e.target.email.value = "";
+    e.target.subject.value = "";
+    e.target.body.value = "";
+    errorMsg.innerHTML = "";
+  });
+}
+function sendEmail(name, email, subject, body, callback) {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "akashs13122000@gmail.com",
+    Password: "18C2EE26A1BA83A5FB88018E92EDDD3384D3",
+    To: "akashs13122000@gmail.com",
+    From: email,
+    Subject: subject,
+    Body: body,
+  }).then((message) => {
+    console.log(message);
+    if (message === "OK") {
+      alert("Mail Sent to Akash Sardar");
+      callback();
+    } else {
+      errorMsg.innerHTML = "Please check your Email ID";
+    }
+  });
+}

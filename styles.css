@@ -1,17 +1,19 @@
 :root {
-  --main-color: linear-gradient(
-    to bottom,
-    rgba(80, 226, 43, 0.6),
-    rgb(80, 226, 43)
-  );
+  --main-color: linear-gradient(to bottom, rgb(43, 195, 226), rgb(0, 151, 238));
 
-  --second-color: rgb(80, 226, 43);
+  --second-color: rgb(0, 187, 255);
+  --transparent-color: linear-gradient(
+    to bottom,
+    rgb(43, 195, 226, 0.5),
+    rgb(0, 151, 238, 0.3)
+  );
 }
 
 body {
   margin: 0;
   padding: 0;
   background: #333;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .custom-text-color {
@@ -25,7 +27,6 @@ body {
   padding: 0;
   background: url(images/portfolio-bg.jpg);
   background-size: cover;
-  border-bottom: 1px solid white;
 }
 
 #introduction .my-name,
@@ -43,10 +44,20 @@ body {
   width: 37rem;
 }
 
+.list-group-item,
+form {
+  background: linear-gradient(
+    to bottom right,
+    rgb(0, 0, 0, 0.4),
+    rgb(10, 10, 10, 0.2)
+  );
+  color: aliceblue;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+}
+
 .badge {
-  background: var(--main-color);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  background: var(--transparent-color);
+  border-radius: 0;
 }
 
 .my-name {
@@ -67,12 +78,12 @@ body {
 }
 .my-btn {
   background: var(--main-color);
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--second-color);
   color: white;
   padding: 10px;
   width: 200px;
   font-weight: bold;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .submit-btn {
@@ -80,14 +91,12 @@ body {
   background: var(--main-color);
   color: white;
   font-weight: bold;
-  border: 2px solid var(--second-color);
 }
 
 .my-btn:hover,
 .submit-btn:hover {
-  background: white;
-  border: 2px solid var(--second-color);
-  color: var(--second-color);
+  background: var(--transparent-color);
+  color: white;
 }
 
 .custom-navbar {
@@ -96,7 +105,6 @@ body {
 
 .navbar {
   background: rgb(0, 0, 0, 0);
-  border-bottom: 1px solid white;
 }
 
 .navbar--scrolled {
@@ -119,7 +127,7 @@ body {
 }
 
 .list-group-item:hover {
-  background: whitesmoke;
+  background: var(--transparent-color);
   transition: all 0.3s ease;
 }
 

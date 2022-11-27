@@ -1,9 +1,9 @@
 [
     {
-        "name":"Fullstack E-Commerce Website",
+        "name":"Fullstack E-Commerce",
         "keyFeatures":"“No-reload UI”, Basic Authentication(Email ID, Password),Role-based authorization( Customer, Admin, Delivery person),Category based filtering, Editable Shopping cart",
         "technologies":"Java, Spring Boot, Spring Security, React JS,Bootstrap CSS, MySQL, Postman API client, Spring tool suite, VS code.",
-        "projectDetailsLink":"",
+        "projectDetailsLink":"https://docs.google.com/document/d/1UiLPctKzsq96N2wtdVESd-1_DqCAUjgdENqacP7azO8/edit?usp=sharing",
         "githubLink":[
             {
                 "link":"https://github.com/ACashSardar/E-commerce-website-Front-end.git"
@@ -38,5 +38,17 @@
             }
         ],
         "websiteLink":"https://react-news-app-akash.netlify.app"
+    },
+    {
+        "name":"Sorting Visualizer",
+        "keyFeatures":"Animates different sorting algorithms of various complexities on a webpage. The number of samples and animation speed are customizable. It includes Bubble sort, Merges sort, Selection sort &  Quick sort.",
+        "technologies":"Html, CSS, JavaScript, and Bootstrap.",
+        "projectDetailsLink":"",
+        "githubLink":[
+            {
+                "link":"https://github.com/ACashSardar/AlgorithmVisualizer.git"
+            }
+        ],
+        "websiteLink":"https://acashsardar.github.io/AlgorithmVisualizer"
     }
 ]

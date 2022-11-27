@@ -60,8 +60,8 @@
 
     <div class="container-fluid p-0">
       <div id="introduction" class="mb-5">
-        <p class="my-name">AKASH SARDAR</p>
-        <p class="my-desc">
+        <p class="my-name" style="font-family: cambria">AKASH SARDAR</p>
+        <p class="my-desc" style="font-family: cambria">
           Junior Web Developer <br />
           From Kolkata, India
         </p>
@@ -78,40 +78,7 @@
       <div id="education" class="d-flex justify-content-center mb-4">
         <div class="shadow">
           <span class="badge fw-bold fs-5 fw-light px-5 py-3">Education</span>
-          <div class="card text-left rounded-0">
-            <div
-              class="card-body bg-light d-flex justify-content-between rounded"
-            >
-              <p class="card-title fw-normal fs-4 custom-text-color mb-0">
-                Jadavpur University
-              </p>
-              <label class="fs-6 mt-2 custom-text-color">College</label>
-            </div>
-            <hr class="p-0 m-0" />
-            <div class="card-body">
-              <p class="card-text fs-6 fw-light">Degree: B.E</p>
-              <p class="card-text fs-6 fw-light">
-                Branch: Electronics and Telecommunication Engineering
-              </p>
-              <p class="card-text fs-6 fw-light">CGPA: 9.17</p>
-            </div>
-          </div>
-          <div class="card text-left rounded-0">
-            <div
-              class="card-body bg-light d-flex justify-content-between rounded"
-            >
-              <p class="card-title fw-normal fs-4 custom-text-color mb-0">
-                Panchasayar Siksha Niketan
-              </p>
-              <label class="fs-6 mt-2 custom-text-color">High School</label>
-            </div>
-            <hr class="p-0 m-0" />
-            <div class="card-body">
-              <p class="card-text fs-6 fw-light">Higher Secondary(10+2)</p>
-              <p class="card-text fs-6 fw-light">Stream: Science(PCM)</p>
-              <p class="card-text fs-6 fw-light">Score: 91.2%</p>
-            </div>
-          </div>
+          <ul class="list-group" id="education-items"></ul>
         </div>
       </div>
 
@@ -138,33 +105,53 @@
 
       <div id="contact" class="d-flex justify-content-center mb-4">
         <div class="shadow">
-          <span class="badge fw-bold fs-5 fw-light px-5 py-3">Contact</span>
-          <div class="card rounded-0">
-            <form action="" class="bg-light p-2">
+          <span class="badge fw-bold fs-5 fw-light px-5 py-3 mb-0"
+            >Contact</span
+          >
+          <div class="rounded-0">
+            <form
+              id="contact-form"
+              class="p-2"
+              onsubmit="return handleFormSubmit(event)"
+            >
+              <label class="text-danger" id="error-msg"></label>
               <input
                 type="text"
-                class="form-control fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
                 placeholder="Enter Your Name"
+                name="name"
+                value=""
+                required
               />
               <input
-                type="text"
-                class="form-control fw-light rounded-0 mb-2"
+                type="email"
+                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
                 placeholder="Enter Your Email Id"
+                name="email"
+                value=""
+                required
               />
               <input
                 type="text"
-                class="form-control fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
                 placeholder="Subject"
+                name="subject"
+                value=""
+                required
               />
               <textarea
-                name=""
                 id=""
-                class="form-control fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
                 cols="30"
                 rows="3"
                 placeholder="Body goes here.."
+                name="body"
+                value=""
+                required
               ></textarea>
-              <button class="btn submit-btn rounded-0 fs-5">Submit</button>
+              <button type="submit" class="btn submit-btn rounded-0 fs-5">
+                Submit
+              </button>
             </form>
           </div>
         </div>
