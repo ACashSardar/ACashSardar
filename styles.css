@@ -7,13 +7,14 @@
     rgb(100, 225, 40, 0.6),
     rgb(10, 165, 10, 0.4)
   );
+  --main-font-family: Cambria;
 }
 
 body {
   margin: 0;
   padding: 0;
   background: #333;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--main-font-family);
 }
 
 .custom-text-color {
@@ -32,12 +33,22 @@ body {
 #introduction .my-name,
 .my-desc {
   color: white;
-  font-size: 6rem;
-  font-family: Calibri Light;
+  font-size: 5rem;
+  font-family: var(--main-font-family);
   position: relative;
-  top: 22vh;
+  top: 15vh;
 }
 
+.my-desc a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
+
+.my-desc a i:hover {
+  color: var(--second-color);
+  transition: all 0.3s ease;
+}
 .card,
 .list-group,
 .badge {
@@ -163,6 +174,7 @@ footer {
   .btn-section {
     justify-content: center;
     margin-right: 0%;
+    top: 30vh;
   }
 
   .card,
