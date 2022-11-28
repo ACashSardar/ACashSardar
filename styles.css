@@ -1,11 +1,11 @@
 :root {
-  --main-color: linear-gradient(to bottom, rgb(43, 195, 226), rgb(0, 151, 238));
+  --main-color: linear-gradient(to bottom, rgb(100, 225, 40), rgb(10, 165, 10));
 
-  --second-color: rgb(0, 187, 255);
+  --second-color: rgb(50, 235, 0);
   --transparent-color: linear-gradient(
     to bottom,
-    rgb(43, 195, 226, 0.5),
-    rgb(0, 151, 238, 0.3)
+    rgb(100, 225, 40, 0.6),
+    rgb(10, 165, 10, 0.4)
   );
 }
 
@@ -56,8 +56,12 @@ form {
 }
 
 .badge {
-  background: var(--transparent-color);
+  text-align: left;
+  background: var(--main-color);
   border-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-left: 0;
 }
 
 .my-name {
