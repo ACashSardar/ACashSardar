@@ -1,17 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Klee+One&family=Lobster&family=Pacifico&family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Klee+One&family=Lobster&family=Pacifico&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Klee+One&family=Lobster&family=Pacifico&family=Poppins:wght@200&family=Ubuntu&display=swap");
 
 :root {
-  --main-color: linear-gradient(to bottom, darkcyan, lightseagreen);
-
-  --second-color: cyan;
-  --transparent-color: linear-gradient(
-    to bottom,
-    rgb(0, 139, 139, 0.6),
-    rgb(32, 178, 170, 0.4)
-  );
-  --main-font-family: Klee One;
-  --second-font-family: Caveat;
+  --main-color: lightblue;
+  --second-color: dodgerblue;
+  --transparent-color: rgb(30, 144, 255, 0.7);
+  --main-font-family: Poppins;
+  --secondary-font-family: Calibri Light;
 }
 
 body {
@@ -44,7 +38,7 @@ body {
 .my-desc {
   color: white;
   font-size: 5rem;
-  font-family: var(--second-font-family);
+  font-family: var(--main-font-family);
   position: relative;
   top: 15vh;
 }
@@ -83,15 +77,16 @@ form {
   background: #333;
   color: white;
   border: 0px solid rgb(0, 0, 0, 0.4);
+  font-family: var(--main-font-family);
 }
 
 .badge {
   text-align: left;
-  background: black;
-  color: white;
+  background: var(--main-color);
+  color: black;
   border-radius: 5px;
   letter-spacing: 2px;
-  font-family: var(--second-font-family);
+  font-family: var(--main-font-family);
 }
 
 .my-name {
@@ -111,24 +106,15 @@ form {
   justify-content: right;
   margin-right: 12.5%;
 }
-.my-btn {
-  background: var(--main-color);
-  border: 1px solid var(--second-color);
-  color: white;
-  padding: 5px 10px;
-  width: 200px;
-  border-radius: 5px;
-}
 
 .submit-btn {
   width: 100%;
-  background: var(--main-color);
+  background: var(--second-color);
   color: white;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px;
 }
 
-.my-btn:hover,
 .submit-btn:hover {
   background: var(--transparent-color);
   color: white;
@@ -189,7 +175,6 @@ footer {
   }
   #introduction .my-name {
     font-size: 2.5rem;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   }
 
   #introduction .my-desc {
@@ -208,7 +193,6 @@ footer {
   }
 
   .my-btn {
-    width: 180px;
     font-size: 13px;
   }
 
@@ -220,5 +204,9 @@ footer {
 
   .nav-item a:hover {
     text-decoration: none;
+  }
+
+  .list-group-item {
+    font-family: var(--secondary-font-family);
   }
 }
