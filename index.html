@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg custom-navbar navbar-dark fixed-top shadowp-3"
+      class="navbar navbar-expand-lg navbar navbar-dark fixed-top shdp-3"
       id="navbar"
     >
       <div class="container-fluid">
@@ -65,11 +65,16 @@
             Welcome to my portfolio, great to have you here!
           </marquee>
         </div>
-        <p class="my-desc">Hello, I'm</p>
+        <p class="my-desc">Hi there! I'm</p>
         <p class="my-name">AKASH SARDAR</p>
-        <p class="my-desc">
-          Junior Web Developer <br />
-          From Kolkata, India
+        <p class="my-desc d-flex justify-content-start">
+          <span>
+            <img src="images/myPic.jpg" alt="" class="my-pic" />
+          </span>
+          <span class="mt-auto ms-3">
+            Junior Web Developer <br />
+            From Kolkata, India
+          </span>
         </p>
 
         <div class="btn-section">
@@ -81,9 +86,11 @@
           </button>
         </div>
 
-        <div class="my-desc">
+        <div class="my-desc mt-0">
+          <hr class="bg-light" style="width: 86%" />
+          <label class="me-3">Find me on: </label>
           <a
-            href="https://www.linkedin.com/in/akash-sardar-118858184/"
+            href="https://www.linkedin.com/in/akash-sardar-118858184"
             target="_blank"
           >
             <i class="fa fa-linkedin"></i>
@@ -97,41 +104,52 @@
           <a href="https://github.com/ACashSardar" target="_blank">
             <i class="fa fa-github"></i>
           </a>
+          <a href="https://www.instagram.com/lazer.kitty" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
         </div>
       </div>
 
-      <div id="education" class="d-flex justify-content-center">
-        <div class="shadow mt-4">
-          <span class="badge fw-bold fs-5 fw-light px-3 py-3">Education</span>
+      <div id="education" class="d-flex justify-content-start ms-2">
+        <div class="shd mt-4">
+          <span class="badge fw-bold fs-5 fw-light p-2"
+            ><i class="fa fa-graduation-cap"></i> Education</span
+          >
           <ul class="list-group" id="education-items"></ul>
         </div>
       </div>
 
-      <div id="experience" class="d-flex justify-content-center">
-        <div class="shadow mt-4">
-          <span class="badge fw-bold fs-5 fw-light px-3 py-3">Experience</span>
+      <div id="experience" class="d-flex justify-content-end me-2">
+        <div class="shd mt-4">
+          <span class="badge fw-bold fs-5 fw-light p-2"
+            ><i class="fa fa-history"></i> Experience</span
+          >
           <ul class="list-group" id="experience-items"></ul>
         </div>
       </div>
 
-      <div id="skills" class="d-flex justify-content-center">
-        <div class="shadow mt-4">
-          <span class="badge fw-bold fs-5 fw-light px-3 py-3">Skills</span>
+      <div id="skills" class="d-flex justify-content-start ms-2">
+        <div class="shd mt-4">
+          <span class="badge fw-bold fs-5 fw-light p-2"
+            ><i class="fa fa-cogs"></i> Skills</span
+          >
           <ul class="list-group" id="skillset"></ul>
         </div>
       </div>
 
-      <div id="projects" class="d-flex justify-content-center">
-        <div class="shadow mt-4">
-          <span class="badge fw-bold fs-5 fw-light px-3 py-3">Projects</span>
+      <div id="projects" class="d-flex justify-content-end me-2">
+        <div class="shd mt-4">
+          <span class="badge fw-bold fs-5 fw-light p-2"
+            ><i class="fa fa-code"></i> Projects</span
+          >
           <ul class="list-group" id="project-items"></ul>
         </div>
       </div>
 
-      <div id="contact" class="d-flex justify-content-center">
-        <div class="shadow mt-4">
-          <span class="badge fw-bold fs-5 fw-light px-3 py-3 mb-0"
-            >Contact</span
+      <div id="contact" class="d-flex justify-content-start ms-2">
+        <div class="shd mt-4">
+          <span class="badge fw-bold fs-5 fw-light p-2 mb-0"
+            ><i class="fa fa-envelope"></i> Contact</span
           >
           <div class="rounded-0">
             <form
@@ -142,7 +160,7 @@
               <label class="text-danger" id="error-msg"></label>
               <input
                 type="text"
-                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
                 placeholder="Enter Your Name"
                 name="name"
                 value=""
@@ -150,7 +168,7 @@
               />
               <input
                 type="email"
-                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
                 placeholder="Enter Your Email Id"
                 name="email"
                 value=""
@@ -158,7 +176,7 @@
               />
               <input
                 type="text"
-                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
                 placeholder="Subject"
                 name="subject"
                 value=""
@@ -166,7 +184,7 @@
               />
               <textarea
                 id=""
-                class="form-control bg-dark text-light border-secondary fw-light rounded-0 mb-2"
+                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
                 cols="30"
                 rows="3"
                 placeholder="Body goes here.."
@@ -174,9 +192,7 @@
                 value=""
                 required
               ></textarea>
-              <button type="submit" class="btn submit-btn rounded-0 fs-5">
-                Submit
-              </button>
+              <button type="submit" class="btn submit-btn fs-5">Submit</button>
             </form>
           </div>
         </div>

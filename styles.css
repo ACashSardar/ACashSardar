@@ -1,13 +1,17 @@
-:root {
-  --main-color: linear-gradient(to bottom, rgb(100, 225, 40), rgb(10, 165, 10));
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Klee+One&family=Lobster&family=Pacifico&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Klee+One&family=Lobster&family=Pacifico&family=Ubuntu&display=swap");
 
-  --second-color: rgb(50, 235, 0);
+:root {
+  --main-color: linear-gradient(to bottom, darkcyan, lightseagreen);
+
+  --second-color: cyan;
   --transparent-color: linear-gradient(
     to bottom,
-    rgb(100, 225, 40, 0.6),
-    rgb(10, 165, 10, 0.4)
+    rgb(0, 139, 139, 0.6),
+    rgb(32, 178, 170, 0.4)
   );
-  --main-font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --main-font-family: Klee One;
+  --second-font-family: Caveat;
 }
 
 body {
@@ -19,6 +23,12 @@ body {
 
 .custom-text-color {
   color: var(--main-color);
+}
+.custom-bg {
+  background: #333;
+  border: 0px solid #333;
+  border-left: 2px solid white;
+  border-radius: 0;
 }
 
 #introduction {
@@ -34,7 +44,7 @@ body {
 .my-desc {
   color: white;
   font-size: 5rem;
-  font-family: var(--main-font-family);
+  font-family: var(--second-font-family);
   position: relative;
   top: 15vh;
 }
@@ -49,6 +59,19 @@ body {
   color: var(--second-color);
   transition: all 0.3s ease;
 }
+
+.my-pic {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5px;
+  background: #333;
+}
+
+.my-pic:hover {
+  transform: rotate(-5deg);
+  transition: all 0.5s ease;
+}
+
 .card,
 .list-group,
 .badge {
@@ -57,26 +80,23 @@ body {
 
 .list-group-item,
 form {
-  background: linear-gradient(
-    to bottom right,
-    rgb(0, 0, 0, 0.4),
-    rgb(10, 10, 10, 0.2)
-  );
-  color: aliceblue;
-  border: 1px solid rgb(0, 0, 0, 0.4);
+  background: #333;
+  color: white;
+  border: 0px solid rgb(0, 0, 0, 0.4);
 }
 
 .badge {
   text-align: left;
-  background: var(--main-color);
-  border-radius: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding-left: 0;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-family: var(--second-font-family);
 }
 
 .my-name {
   padding-left: 12vw;
+  text-shadow: 3px 3px 3px var(--second-color);
 }
 
 .my-desc {
@@ -86,32 +106,42 @@ form {
 }
 .btn-section {
   position: relative;
-  top: 38vh;
+  top: 15vh;
   display: flex;
   justify-content: right;
-  margin-right: 15%;
+  margin-right: 12.5%;
 }
 .my-btn {
   background: var(--main-color);
   border: 1px solid var(--second-color);
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
   width: 200px;
-  font-weight: bold;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .submit-btn {
   width: 100%;
   background: var(--main-color);
   color: white;
-  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .my-btn:hover,
 .submit-btn:hover {
   background: var(--transparent-color);
   color: white;
+}
+
+.show-details {
+  text-decoration: none;
+}
+
+.show-details:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 3px;
 }
 
 .custom-navbar {
@@ -142,11 +172,6 @@ form {
   text-underline-offset: 15px;
 }
 
-.list-group-item:hover {
-  background: var(--transparent-color);
-  transition: all 0.3s ease;
-}
-
 footer {
   height: 10vh;
   background-color: #333;
@@ -171,10 +196,20 @@ footer {
     font-size: 1.5rem;
   }
 
+  .my-pic {
+    height: 6rem;
+    width: 6rem;
+  }
+
   .btn-section {
     justify-content: center;
     margin-right: 0%;
-    top: 30vh;
+    top: 15vh;
+  }
+
+  .my-btn {
+    width: 180px;
+    font-size: 13px;
   }
 
   .card,

@@ -37,7 +37,7 @@ fetch("resources/education.json")
   .then((data) => {
     data.forEach((edu, index) => {
       educationItems.innerHTML += `
-        <li class="list-group-item rounded-0">
+        <li class="list-group-item">
         <div class="d-flex justify-content-between">
             <label class="fs-5 fw-normal custom-text-color">${edu.institutionName}</label>
             <label class="fs-6 fw-light pt-2">${edu.institutionType}</label>
@@ -60,7 +60,7 @@ fetch("resources/experience.json")
   .then((data) => {
     data.forEach((exp, index) => {
       experienceItems.innerHTML += `
-        <li class="list-group-item rounded-0">
+        <li class="list-group-item">
         <div class="d-flex justify-content-between">
             <label class="fs-5 fw-normal custom-text-color">${
               exp.company
@@ -80,18 +80,43 @@ fetch("resources/skills.json")
   .then((data) => {
     data.forEach((skill, index) => {
       skillset.innerHTML += `
-        <li class="list-group-item rounded-0">
-        <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-normal custom-text-color">${
-              skill.name
-            }</label>
-            <label class="fs-6 fw-light pt-2">${skill.category}</label>
-        </div>
-        <span
-            ><hr style="width: ${
-              skill.rating
-            }%; height: 2px; border:2px solid ${"white"}; background: ${"white"}; border-radius:5px; margin:2px"
-        /></span>
+        <li class="list-group-item">
+
+        <label class="fs-5 fw-normal custom-text-color">${skill.name}</label>
+        <br>
+        <label>
+        <a
+            class="show-details link-light fw-light"
+            data-bs-toggle="collapse"
+            href="#si${index}"
+            role="button"
+            aria-expanded="false"
+            aria-controls="si${index}"
+            onClick="changeArrow(this)"
+        >
+            Show Details <i class="fa fa-caret-down"></i>
+        </a>
+      </label>
+      <div class="collapse" id="si${index}">
+      <div class="card text-light border-0 card-body p-0" style="width:100%">
+          ${skill.subSkills
+            .map(
+              (subskill, index) =>
+                `
+                <div class="px-3 py-2 custom-bg">
+                  <div class="d-flex justify-content-between mb-1">
+                      <label class="fs-6 fw-normal custom-text-color">${subskill.name}</label>
+                      <label class="fs-6 fw-light pt-2">${subskill.rating}%</label>
+                  </div>
+                  <div class="progress" style="height:8px">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: ${subskill.rating}%; height:8px" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                `
+            )
+            .join("")}
+      </div>
+      </div>
         </li>
       `;
     });
@@ -102,13 +127,13 @@ fetch("resources/projects.json")
   .then((data) => {
     data.forEach((project, index) => {
       projectItems.innerHTML += `
-        <li class="list-group-item rounded-0">
+        <li class="list-group-item">
             <label class="fs-5 fw-normal custom-text-color">${
               project.name
             }</label><br>
             <label>
               <a
-                  class="text-decoration-none link-light fw-light"
+                  class="show-details link-light fw-light"
                   data-bs-toggle="collapse"
                   href="#pi${index}"
                   role="button"
@@ -120,7 +145,7 @@ fetch("resources/projects.json")
               </a>
             </label>
             <div class="collapse" id="pi${index}">
-            <div class="card text-light bg-dark card-body mb-2" style="width:100%">
+            <div class="card text-light custom-bg card-body mb-2" style="width:100%">
                 <h5>Key Features:</h5>
                 <p class="fs-6 fw-light">${project.keyFeatures}</p>
 

@@ -1,32 +1,66 @@
 [
     {
-        "name":"Java",
-        "category":"Programming language",
-        "rating":80
+        "name":"Frontend development",
+        "subSkills":[
+            {
+                "name":"Html",
+                "rating":90
+            },
+            {
+                "name":"CSS",
+                "rating":70
+            },
+            {
+                "name":"Bootstrap",
+                "rating":70
+            },
+            {
+                "name":"JavaScript",
+                "rating":50
+            },
+            {
+                "name":"React JS",
+                "rating":40
+            }
+        ]
+    },
+
+    {
+        "name":"Backend development",
+        "subSkills":[
+            {
+                "name":"Java",
+                "rating":80
+            },
+            {
+                "name":"Spring Boot",
+                "rating":60
+            },
+            {
+                "name":"MySQL",
+                "rating":70
+            },
+            {
+                "name":"Restful API",
+                "rating":60
+            }
+        ]
     },
     {
-        "name":"JavaScript",
-        "category":"Programming language",
-        "rating":50
-    },
-    {
-        "name":"Spring Boot",
-        "category":"Backend Framework",
-        "rating":60
-    },
-    {
-        "name":"React JS",
-        "category":"Frontend Library",
-        "rating":40
-    },
-    {
-        "name":"Bootstrap",
-        "category":"CSS Framework",
-        "rating":70
-    },
-    {
-        "name":"MySQL",
-        "category":"Database",
-        "rating":70
+        "name":"Computer Science Fundamentals",
+        "subSkills":[
+            {
+                "name":"Data Structures & Algorithm",
+                "rating":70
+            },
+            {
+                "name":"DBMS",
+                "rating":50
+            },
+            {
+                "name":"Computer Networks",
+                "rating":60
+            }
+        ]
     }
 ]
