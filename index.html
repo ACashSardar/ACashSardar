@@ -24,15 +24,16 @@
     >
       <div class="container-fluid">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler p-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onclick="return changeNavIcon()"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span id="nav-btn"><i class="fa fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -80,7 +81,7 @@
 
         <div class="btn-section">
           <button
-            class="btn btn-primary btn-sm rounded-5"
+            class="btn btn-dark btn-sm fw-bold rounded-5"
             onclick="download(this)"
           >
             Download Resume <i class="fa fa-download"></i>
@@ -112,8 +113,8 @@
       </div>
 
       <div id="education" class="d-flex justify-content-start ms-2">
-        <div class="mt-4">
-          <span class="badge fw-bold fs-5 fw-light p-2"
+        <div class="custom-margin">
+          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
             ><i class="fa fa-graduation-cap"></i> Education</span
           >
           <ul class="list-group" id="education-items"></ul>
@@ -121,8 +122,8 @@
       </div>
 
       <div id="experience" class="d-flex justify-content-end me-2">
-        <div class="mt-4">
-          <span class="badge fw-bold fs-5 fw-light p-2"
+        <div class="custom-margin">
+          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
             ><i class="fa fa-history"></i> Experience</span
           >
           <ul class="list-group" id="experience-items"></ul>
@@ -130,17 +131,17 @@
       </div>
 
       <div id="skills" class="d-flex justify-content-start ms-2">
-        <div class="mt-4">
-          <span class="badge fw-bold fs-5 fw-light p-2"
-            ><i class="fa fa-cogs"></i> Skills</span
+        <div class="custom-margin">
+          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
+            ><i class="fa fa-gears"></i> Skills</span
           >
           <ul class="list-group" id="skillset"></ul>
         </div>
       </div>
 
       <div id="projects" class="d-flex justify-content-end me-2">
-        <div class="mt-4">
-          <span class="badge fw-bold fs-5 fw-light p-2"
+        <div class="custom-margin">
+          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
             ><i class="fa fa-code"></i> Projects</span
           >
           <ul class="list-group" id="project-items"></ul>
@@ -148,8 +149,8 @@
       </div>
 
       <div id="contact" class="d-flex justify-content-start ms-2">
-        <div class="mt-4">
-          <span class="badge fw-bold fs-5 fw-light p-2 mb-0"
+        <div class="custom-margin">
+          <span class="badge fw-bold fs-5 fw-light p-2 ps-3 mb-0"
             ><i class="fa fa-envelope"></i> Contact</span
           >
           <div class="rounded-0">
@@ -192,7 +193,11 @@
                 name="body"
                 value=""
                 required
-              ></textarea>
+              ></textarea
+              ><br />
+              <button class="btn btn-danger fs-6" onclick="return resetForm()">
+                Cancel
+              </button>
               <button type="submit" class="btn submit-btn fs-6">Submit</button>
             </form>
           </div>

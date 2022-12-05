@@ -4,12 +4,23 @@ const projectItems = document.getElementById("project-items");
 const experienceItems = document.getElementById("experience-items");
 const educationItems = document.getElementById("education-items");
 const errorMsg = document.getElementById("error-msg");
+const navBtn = document.getElementById("nav-btn");
 
 const colors = ["darkcyan", "lime", "orangered"];
 
+function changeNavIcon() {
+  if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
+    navBtn.innerHTML = '<i class="fa fa-bars"></i>';
+    navBtn.style.color = "grey";
+  } else {
+    navBtn.innerHTML = '<i class="fa fa-times"></i>';
+    navBtn.style.color = "red";
+  }
+}
+
 window.onscroll = () => {
   if (document.documentElement.scrollTop >= 680 || window.innerWidth < 600) {
-    navbar.style.background = "#333";
+    navbar.style.background = "black";
   } else {
     navbar.style.background = "rgba(0,0,0,0.5)";
   }
@@ -105,7 +116,7 @@ fetch("resources/skills.json")
                 `
                 <div class="px-3 py-2 custom-bg">
                   <div class="d-flex justify-content-between mb-1">
-                      <label class="fs-6 fw-normal custom-text-color">${subskill.name}</label>
+                      <label class="fs-6 fw-light">${subskill.name}</label>
                       <label class="fs-6 fw-light pt-2">${subskill.rating}%</label>
                   </div>
                   <div class="progress" style="height:8px">
@@ -146,33 +157,34 @@ fetch("resources/projects.json")
             </label>
             <div class="collapse" id="pi${index}">
             <div class="card text-light custom-bg card-body mb-2" style="width:100%">
-                <h5>Key Features:</h5>
+                <p class="fs-5 fw-normal text-info mb-0">Key Features:</p>
                 <p class="fs-6 fw-light">${project.keyFeatures}</p>
 
-                <h5>Tools and technologies</h5>
+                <p class="fs-5 fw-normal text-info mb-0">Tools and technologies</p>
                 <p class="fs-6 fw-light">${project.technologies}</p>
 
-                <h5>Documentation Link</h5>
+                <p class="fs-5 fw-normal text-info mb-0">Documentation Link</p>
+
                 <a href=${
                   project.projectDetailsLink
-                } target="_blank" class="fs-6 fw-light mb-2">${
+                } target="_blank" class="fs-6 fw-light link-light mb-2">${
         project.projectDetailsLink
       }</a>
 
-                <h5>GitHub Link</h5>
+                <p class="fs-5 fw-normal text-info mb-0">GitHub Link</p>
                 <div class="d-flex flex-column mb-2">
                 ${project.githubLink
                   .map(
                     (e, index) =>
-                      `<a href=${e.link} target="_blank" class="class="fs-6 fw-light me-2">${e.link}</a>`
+                      `<a href=${e.link} target="_blank" class="fs-6 fw-light link-light me-2">${e.link}</a>`
                   )
                   .join("")}
                 </div>
                 
                 ${
                   project.websiteLink !== ""
-                    ? `<h5>Website Link</h5>
-                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light">${project.websiteLink}</a>`
+                    ? `<p class="fs-5 fw-normal text-info mb-0">Website Link</p>
+                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light link-light">${project.websiteLink}</a>`
                     : ""
                 }
 
@@ -198,6 +210,7 @@ function handleFormSubmit(e) {
     errorMsg.innerHTML = "";
   });
 }
+
 function sendEmail(name, email, subject, body, callback) {
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -216,4 +229,8 @@ function sendEmail(name, email, subject, body, callback) {
       errorMsg.innerHTML = "Please check your Email ID";
     }
   });
+}
+
+function resetForm() {
+  document.getElementById("contact-form").reset();
 }
