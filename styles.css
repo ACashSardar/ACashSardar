@@ -51,10 +51,11 @@ body {
 
 .my-desc a {
   text-decoration: none;
-  color: black;
+  color: slategray;
   margin-right: 1rem;
-  font-weight: 200;
+  font-weight: bold;
   cursor: pointer;
+  text-shadow: 1px 1px 1px white;
 }
 
 .my-desc a i:hover {
@@ -97,7 +98,7 @@ form {
   padding-left: 12vw;
   font-weight: bold;
   font-size: 3.5rem;
-  text-shadow: 2px 2px 2px pink;
+  text-shadow: 3px 3px 5px white;
 }
 
 .my-desc {
