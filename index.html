@@ -18,8 +18,7 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg navbar navbar-dark fixed-top shdp-3"
-      54
+      class="navbar navbar-expand-lg navbar bg-light border-bottom fixed-top p-3 mb-5"
       id="navbar"
     >
       <div class="container-fluid">
@@ -61,7 +60,7 @@
     </nav>
 
     <div class="container-fluid p-0">
-      <div id="introduction" class="mb-5">
+      <div id="introduction" class="mb-2">
         <div class="my-desc" style="width: 85%">
           <marquee direction="left">
             Welcome to my portfolio, great to have you here!
@@ -69,19 +68,19 @@
         </div>
         <p class="my-desc">Hi there! I'm</p>
         <p class="my-name">AKASH SARDAR</p>
-        <p class="my-desc d-flex justify-content-start">
+        <p class="my-desc d-flex justify-content-start text-dark">
           <span>
-            <img src="images/myPic.jpg" alt="" class="my-pic" />
+            <img src="images/akash_sardar.jpeg" alt="" class="my-pic" />
           </span>
           <span class="mt-auto ms-3">
-            Junior Web Developer <br />
-            From Kolkata, India
+            From Kolkata, India<br />
+            I'm currently working as a Software Developer @Wipro
           </span>
         </p>
 
         <div class="btn-section">
           <button
-            class="btn btn-dark btn-sm fw-bold rounded-5"
+            class="btn btn-secondary btn-sm rounded-2 px-3"
             onclick="download(this)"
           >
             Download Resume <i class="fa fa-download"></i>
@@ -90,31 +89,62 @@
 
         <div class="my-desc mt-0">
           <hr class="bg-light" style="width: 86%" />
-          <label class="me-3">Find me on: </label>
-          <a
-            href="https://www.linkedin.com/in/akash-sardar-118858184"
-            target="_blank"
-          >
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/akash.sardar.1717" target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="https://github.com/ACashSardar" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="https://www.instagram.com/lazer.kitty" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
+          <div class="row me-0">
+            <div class="col-md-7">
+              <label class="me-3">Coding profiles: </label>
+              <a href="https://leetcode.com/Akash-Sardar/" target="_blank">
+                Leetcode
+              </a>
+              <a
+                href="https://codeforces.com/profile/Akash_Sardar"
+                target="_blank"
+              >
+                Codeforces
+              </a>
+              <a
+                href="https://auth.geeksforgeeks.org/user/akashsardar383/?utm_source=geeksforgeeks&utm_medium=my_profile&utm_campaign=auth_user"
+                target="_blank"
+              >
+                GFG
+              </a>
+              <a
+                href="https://www.codechef.com/users/akash_sardar"
+                target="_blank"
+              >
+                Codechef
+              </a>
+            </div>
+            <div class="col-md-5">
+              <label class="me-3">Find me on: </label>
+              <a
+                href="https://www.linkedin.com/in/akash-sardar-118858184"
+                target="_blank"
+              >
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/akash.sardar.1717"
+                target="_blank"
+              >
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://github.com/ACashSardar" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/lazer.kitty" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div id="education" class="d-flex justify-content-start ms-2">
         <div class="custom-margin">
-          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
+          <span class="badge fw-bold fs-5 p-2 ps-3"
             ><i class="fa fa-graduation-cap"></i> Education</span
           >
           <ul class="list-group" id="education-items"></ul>
@@ -123,7 +153,7 @@
 
       <div id="experience" class="d-flex justify-content-end me-2">
         <div class="custom-margin">
-          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
+          <span class="badge fw-bold fs-5 p-2 ps-3"
             ><i class="fa fa-history"></i> Experience</span
           >
           <ul class="list-group" id="experience-items"></ul>
@@ -132,7 +162,7 @@
 
       <div id="skills" class="d-flex justify-content-start ms-2">
         <div class="custom-margin">
-          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
+          <span class="badge fw-bold fs-5 p-2 ps-3"
             ><i class="fa fa-gears"></i> Skills</span
           >
           <ul class="list-group" id="skillset"></ul>
@@ -141,7 +171,7 @@
 
       <div id="projects" class="d-flex justify-content-end me-2">
         <div class="custom-margin">
-          <span class="badge fw-bold fs-5 fw-light p-2 ps-3"
+          <span class="badge fw-bold fs-5 p-2 ps-3"
             ><i class="fa fa-code"></i> Projects</span
           >
           <ul class="list-group" id="project-items"></ul>
@@ -150,19 +180,19 @@
 
       <div id="contact" class="d-flex justify-content-start ms-2">
         <div class="custom-margin">
-          <span class="badge fw-bold fs-5 fw-light p-2 ps-3 mb-0"
+          <span class="badge fw-bold fs-5 p-2 ps-3 mb-0"
             ><i class="fa fa-envelope"></i> Contact</span
           >
-          <div class="rounded-0">
+          <div>
             <form
               id="contact-form"
-              class="p-2"
+              class="p-1"
               onsubmit="return handleFormSubmit(event)"
             >
               <label class="text-danger" id="error-msg"></label>
               <input
                 type="text"
-                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
+                class="form-control border mb-2"
                 placeholder="Enter Your Name"
                 name="name"
                 value=""
@@ -170,7 +200,7 @@
               />
               <input
                 type="email"
-                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
+                class="form-control border mb-2"
                 placeholder="Enter Your Email Id"
                 name="email"
                 value=""
@@ -178,7 +208,7 @@
               />
               <input
                 type="text"
-                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
+                class="form-control border mb-2"
                 placeholder="Subject"
                 name="subject"
                 value=""
@@ -186,7 +216,7 @@
               />
               <textarea
                 id=""
-                class="form-control bg-dark text-light border-0 fw-light rounded-0 mb-2"
+                class="form-control border mb-2"
                 cols="30"
                 rows="3"
                 placeholder="Body goes here.."
@@ -206,7 +236,7 @@
     </div>
 
     <footer>
-      <p class="fw-light">Copywright &copy; Akash Sardar, 2022</p>
+      <p>Copywright &copy; Akash Sardar, 2022</p>
     </footer>
 
     <script

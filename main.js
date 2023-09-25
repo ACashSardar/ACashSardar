@@ -20,15 +20,15 @@ function changeNavIcon() {
 
 window.onscroll = () => {
   if (document.documentElement.scrollTop >= 680 || window.innerWidth < 600) {
-    navbar.style.background = "black";
+    navbar.style.background = "white";
   } else {
-    navbar.style.background = "rgba(0,0,0,0.5)";
+    navbar.style.background = "white";
   }
 };
 
 function download(e) {
   var link = document.createElement("a");
-  link.href = "./resources/Resume_Akash.pdf";
+  link.href = "./resources/Resume_Akash_Sardar.pdf";
   link.download = "resume_Akash_Sardar.pdf";
   document.body.appendChild(link);
   link.click();
@@ -53,11 +53,11 @@ fetch("resources/education.json")
             <label class="fs-5 fw-normal custom-text-color">${edu.institutionName}</label>
             <label class="fs-6 fw-light pt-2">${edu.institutionType}</label>
         </div >
-        <div class="d-flex justify-content-between">
+        <div class="d-flex text-primary justify-content-between">
           <p class="fs-6 fw-light mb-0">${edu.degree}</p>
           <p class="fs-6 fw-normal mb-0">${edu.score}</p>
         </div>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex text-primary justify-content-between">
           <p class="fs-6 fw-light mb-0">${edu.branch}</p>
           <p class="fs-6 fw-light mb-0">${edu.duration}</p>
         </div>
@@ -80,7 +80,7 @@ fetch("resources/experience.json")
               exp.duration + ", " + exp.location
             }</label>
         </div>
-          <p class="fs-6 fw-light mb-0">Role: ${exp.role}</p>
+          <p class="fs-6 fw-light text-primary mb-0">Role: ${exp.role}</p>
         </li>
       `;
     });
@@ -92,42 +92,17 @@ fetch("resources/skills.json")
     data.forEach((skill, index) => {
       skillset.innerHTML += `
         <li class="list-group-item">
-
-        <label class="fs-5 fw-normal custom-text-color">${skill.name}</label>
-        <br>
-        <label>
-        <a
-            class="show-details link-light fw-light"
-            data-bs-toggle="collapse"
-            href="#si${index}"
-            role="button"
-            aria-expanded="false"
-            aria-controls="si${index}"
-            onClick="changeArrow(this)"
-        >
-            Show Details <i class="fa fa-caret-down"></i>
-        </a>
-      </label>
-      <div class="collapse" id="si${index}">
-      <div class="card text-light border-0 card-body p-0" style="width:100%">
-          ${skill.subSkills
-            .map(
-              (subskill, index) =>
-                `
-                <div class="px-3 py-2 custom-bg">
-                  <div class="d-flex justify-content-between mb-1">
-                      <label class="fs-6 fw-light">${subskill.name}</label>
-                      <label class="fs-6 fw-light pt-2">${subskill.rating}%</label>
-                  </div>
-                  <div class="progress" style="height:8px">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: ${subskill.rating}%; height:8px" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                `
-            )
-            .join("")}
-      </div>
-      </div>
+          <label class="fs-5 fw-normal custom-text-color">${skill.name}</label>
+          <br>
+          <div class="card text-primary border-0 card-body p-0" style="width:100%">
+              ${skill.subSkills
+                .map(
+                  (subskill, index) =>
+                    `${subskill.name},
+                    `
+                )
+                .join("")}
+          </div>
         </li>
       `;
     });
@@ -144,7 +119,7 @@ fetch("resources/projects.json")
             }</label><br>
             <label>
               <a
-                  class="show-details link-light fw-light"
+                  class="show-details link-dark fw-light"
                   data-bs-toggle="collapse"
                   href="#pi${index}"
                   role="button"
@@ -156,35 +131,35 @@ fetch("resources/projects.json")
               </a>
             </label>
             <div class="collapse" id="pi${index}">
-            <div class="card text-light custom-bg card-body mb-2" style="width:100%">
-                <p class="fs-5 fw-normal text-info mb-0">Key Features:</p>
+            <div class="card text-dark custom-bg card-body mb-2" style="width:100%">
+                <p class="fs-5 fw-normal text-primary mb-0">Key Features:</p>
                 <p class="fs-6 fw-light">${project.keyFeatures}</p>
 
-                <p class="fs-5 fw-normal text-info mb-0">Tools and technologies</p>
+                <p class="fs-5 fw-normal text-primary mb-0">Tools and technologies</p>
                 <p class="fs-6 fw-light">${project.technologies}</p>
 
-                <p class="fs-5 fw-normal text-info mb-0">Documentation Link</p>
+                <p class="fs-5 fw-normal text-primary mb-0">Video Demo</p>
 
                 <a href=${
                   project.projectDetailsLink
-                } target="_blank" class="fs-6 fw-light link-light mb-2">${
+                } target="_blank" class="fs-6 fw-light link-dark mb-2">${
         project.projectDetailsLink
       }</a>
 
-                <p class="fs-5 fw-normal text-info mb-0">GitHub Link</p>
+                <p class="fs-5 fw-normal text-primary mb-0">GitHub Link</p>
                 <div class="d-flex flex-column mb-2">
                 ${project.githubLink
                   .map(
                     (e, index) =>
-                      `<a href=${e.link} target="_blank" class="fs-6 fw-light link-light me-2">${e.link}</a>`
+                      `<a href=${e.link} target="_blank" class="fs-6 fw-light link-dark me-2">${e.link}</a>`
                   )
                   .join("")}
                 </div>
                 
                 ${
                   project.websiteLink !== ""
-                    ? `<p class="fs-5 fw-normal text-info mb-0">Website Link</p>
-                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light link-light">${project.websiteLink}</a>`
+                    ? `<p class="fs-5 fw-normal text-primary mb-0">Website Link</p>
+                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light link-dark">${project.websiteLink}</a>`
                     : ""
                 }
 

@@ -1,26 +1,39 @@
 [
     {
-        "name":"Frontend development",
+        "name":"Data Structures & Algorithm",
         "subSkills":[
             {
-                "name":"Html",
-                "rating":90
+                "name":"Arrays"
             },
             {
-                "name":"CSS",
-                "rating":70
+                "name":"Linked List"
             },
             {
-                "name":"Bootstrap",
-                "rating":70
+                "name":"Stacks"
             },
             {
-                "name":"JavaScript",
-                "rating":50
+                "name":"Queues"
             },
             {
-                "name":"React JS",
-                "rating":40
+                "name":"Sorting"
+            },
+            {
+                "name":"Searching"
+            },
+            {
+                "name":"Hashing"
+            },
+            {
+                "name":"Heaps"
+            },
+            {
+                "name":"Trees"
+            },
+            {
+                "name":"Dynamic programming"
+            },
+            {
+                "name":"Graphs"
             }
         ]
     },
@@ -29,37 +42,49 @@
         "name":"Backend development",
         "subSkills":[
             {
-                "name":"Java",
-                "rating":80
+                "name":"Java"
             },
             {
-                "name":"Spring Boot",
-                "rating":60
+                "name":"Spring Boot"
             },
             {
-                "name":"MySQL",
-                "rating":70
+                "name":"Restful API"
             },
             {
-                "name":"Restful API",
-                "rating":60
+                "name":"MySQL"
             }
         ]
     },
+
     {
-        "name":"Computer Science Fundamentals",
+        "name":"Frontend development",
         "subSkills":[
             {
-                "name":"Data Structures & Algorithm",
-                "rating":70
+                "name":"Html"
             },
             {
-                "name":"DBMS",
-                "rating":50
+                "name":"CSS"
             },
             {
-                "name":"Computer Networks",
-                "rating":60
+                "name":"Bootstrap"
+            },
+            {
+                "name":"JavaScript"
+            },
+            {
+                "name":"React JS"
+            }
+        ]
+    },
+
+    {
+        "name":"Computer Science Core",
+        "subSkills":[
+            {
+                "name":"DBMS"
+            },
+            {
+                "name":"Computer Networks"
             }
         ]
     }
