@@ -12,7 +12,8 @@
                 "link":"https://github.com/ACashSardar/E-commerce-website-Back-end.git"
             }
         ],
-        "websiteLink":""
+        "websiteLink":"",
+        "logo":"./images/E_commerce.png"
 
     },
     {
@@ -25,10 +26,12 @@
                 "link":"https://github.com/ACashSardar/SpringBoot-blog-application.git"
             }
         ],
-        "websiteLink":""
+        "websiteLink":"",
+        "logo":"./images/TravelBlog.png"
+        
     },
     {
-        "name":"Sorting Visualizer",
+        "name":"Algorithm Visualizer",
         "keyFeatures":"Visualization of sorting algorithms, backtracking problems (Sudoku), BFS and DFS traversal, recursion problem (Tower of Hanoi), and dynamic programming problem (Longest Common Subsequence).",
         "technologies":"Html, CSS, JavaScript, and Bootstrap.",
         "projectDetailsLink":"",
@@ -37,7 +40,8 @@
                 "link":"https://github.com/ACashSardar/AlgorithmVisualizer.git"
             }
         ],
-        "websiteLink":"https://acashsardar.github.io/AlgorithmVisualizer"
+        "websiteLink":"https://acashsardar.github.io/AlgorithmVisualizer",
+        "logo":"./images/AlgorithmVisualizer.png"
     },
     {
         "name":"News Website",
@@ -49,7 +53,8 @@
                 "link":"https://github.com/ACashSardar/Reactjs-news-website.git"
             }
         ],
-        "websiteLink":"https://react-news-app-akash.netlify.app"
+        "websiteLink":"https://react-news-app-akash.netlify.app",
+        "logo":"./images/NewsApp.png"
     }
 
 ]

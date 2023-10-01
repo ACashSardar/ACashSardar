@@ -1,91 +1,26 @@
 [
     {
-        "name":"Data Structures & Algorithm",
-        "subSkills":[
-            {
-                "name":"Arrays"
-            },
-            {
-                "name":"Linked List"
-            },
-            {
-                "name":"Stacks"
-            },
-            {
-                "name":"Queues"
-            },
-            {
-                "name":"Sorting"
-            },
-            {
-                "name":"Searching"
-            },
-            {
-                "name":"Hashing"
-            },
-            {
-                "name":"Heaps"
-            },
-            {
-                "name":"Trees"
-            },
-            {
-                "name":"Dynamic programming"
-            },
-            {
-                "name":"Graphs"
-            }
-        ]
+        "logo":"./images/Java.png"
     },
-
     {
-        "name":"Backend development",
-        "subSkills":[
-            {
-                "name":"Java"
-            },
-            {
-                "name":"Spring Boot"
-            },
-            {
-                "name":"Restful API"
-            },
-            {
-                "name":"MySQL"
-            }
-        ]
+        "logo":"./images/SpringBoot.png"
     },
-
     {
-        "name":"Frontend development",
-        "subSkills":[
-            {
-                "name":"Html"
-            },
-            {
-                "name":"CSS"
-            },
-            {
-                "name":"Bootstrap"
-            },
-            {
-                "name":"JavaScript"
-            },
-            {
-                "name":"React JS"
-            }
-        ]
+        "logo":"./images/RestAPI.png"
     },
-
     {
-        "name":"Computer Science Core",
-        "subSkills":[
-            {
-                "name":"DBMS"
-            },
-            {
-                "name":"Computer Networks"
-            }
-        ]
+        "logo":"./images/HTML.png"
+    },
+    {
+        "logo":"./images/CSS.png"
+    },
+    {
+        "logo":"./images/JavaScript.png"
+    },
+    {
+        "logo":"./images/MySQL.png"
+    },
+    {
+        "logo":"./images/DSA.png"
     }
 ]

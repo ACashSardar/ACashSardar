@@ -3,16 +3,9 @@
         "institutionName":"Jadavpur University",
         "institutionType":"College",
         "degree":"Bachelor of Engineering (B.E.)",
-        "branch": "ECE branch",
+        "branch": "Electronics & Telecommunication",
         "score":"Cgpa: 9.17",
-        "duration":"Aug 2018-June 2022"
-    },
-    {
-        "institutionName":"Panchasayar Siksha Niketan",
-        "institutionType":"High School",
-        "degree":"Higher Secondary(10+2)",
-        "branch": "Science(PCM)",
-        "score":"Score: 91.2%",
-        "duration":"Jan 2011-Feb 2018"
+        "duration":"Aug 2018-June 2022",
+        "logo":"./images/JadavpurLogo.png"
     }
 ]

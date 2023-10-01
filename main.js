@@ -1,5 +1,6 @@
 const navbar = document.getElementById("navbar");
 const skillset = document.getElementById("skillset");
+const profiles = document.getElementById("profile");
 const projectItems = document.getElementById("project-items");
 const experienceItems = document.getElementById("experience-items");
 const educationItems = document.getElementById("education-items");
@@ -48,19 +49,24 @@ fetch("resources/education.json")
   .then((data) => {
     data.forEach((edu, index) => {
       educationItems.innerHTML += `
-        <li class="list-group-item">
-        <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-normal custom-text-color">${edu.institutionName}</label>
-            <label class="fs-6 fw-light pt-2">${edu.institutionType}</label>
-        </div >
-        <div class="d-flex text-primary justify-content-between">
-          <p class="fs-6 fw-light mb-0">${edu.degree}</p>
-          <p class="fs-6 fw-normal mb-0">${edu.score}</p>
-        </div>
-        <div class="d-flex text-primary justify-content-between">
-          <p class="fs-6 fw-light mb-0">${edu.branch}</p>
-          <p class="fs-6 fw-light mb-0">${edu.duration}</p>
-        </div>
+        <li class="list-group-item education mx-auto d-flex justify-content-center border-0">
+          <div class="p-2">
+            <img src=${edu.logo}  style="height: 6rem; width: 6rem">
+          </div>
+          <div class="p-2" style="width: 90%">
+            <div class="d-flex justify-content-between">
+                <label class="fs-5 fw-bold custom-text-color">${edu.institutionName}</label>
+                <label class="fs-6 fw-bold pt-2">${edu.institutionType}</label>
+            </div >
+            <div class="d-flex justify-content-between">
+              <p class="fs-6 fw-light mb-0">${edu.degree}</p>
+              <p class="fs-6 fw-normal mb-0">${edu.score}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="fs-6 fw-light mb-0">${edu.branch}</p>
+              <p class="fs-6 fw-light mb-0">${edu.duration}</p>
+            </div>
+          </div>
         </li>
       `;
     });
@@ -71,16 +77,20 @@ fetch("resources/experience.json")
   .then((data) => {
     data.forEach((exp, index) => {
       experienceItems.innerHTML += `
-        <li class="list-group-item">
-        <div class="d-flex justify-content-between">
-            <label class="fs-5 fw-normal custom-text-color">${
-              exp.company
-            }</label>
-            <label class="fs-6 fw-light pt-2">${
-              exp.duration + ", " + exp.location
-            }</label>
-        </div>
-          <p class="fs-6 fw-light text-primary mb-0">Role: ${exp.role}</p>
+        <li class="list-group-item education mx-auto d-flex justify-content-center border-0">
+          <div class="p-2 pb-3">
+            <img src=${exp.logo} style="height: 6rem; width: 6rem">
+          </div>
+          <div class="p-2" style="width: 90%">
+            <div class="d-flex justify-content-between">
+                <label class="fs-4 fw-bold custom-text-color">${exp.company}</label>
+                <label class="fs-6 fw-bold pt-2">${exp.location}</label>
+            </div>
+            <div class="d-flex justify-content-between">
+                <label class="fs-6 fw-normal custom-text-color">Role: ${exp.role}</label>
+                <label class="fs-6 fw-light pt-2">${exp.duration}</label>
+            </div>
+          </div>
         </li>
       `;
     });
@@ -91,19 +101,9 @@ fetch("resources/skills.json")
   .then((data) => {
     data.forEach((skill, index) => {
       skillset.innerHTML += `
-        <li class="list-group-item">
-          <label class="fs-5 fw-normal custom-text-color">${skill.name}</label>
-          <br>
-          <div class="card text-primary border-0 card-body p-0" style="width:100%">
-              ${skill.subSkills
-                .map(
-                  (subskill, index) =>
-                    `${subskill.name},
-                    `
-                )
-                .join("")}
-          </div>
-        </li>
+        <div class="col-md-2 col-sm-6" >
+          <img src="${skill.logo}" style="height: 8rem" alt="">
+        </div>
       `;
     });
   });
@@ -113,60 +113,64 @@ fetch("resources/projects.json")
   .then((data) => {
     data.forEach((project, index) => {
       projectItems.innerHTML += `
-        <li class="list-group-item">
-            <label class="fs-5 fw-normal custom-text-color">${
-              project.name
-            }</label><br>
-            <label>
-              <a
-                  class="show-details link-dark fw-light"
-                  data-bs-toggle="collapse"
-                  href="#pi${index}"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="pi${index}"
-                  onClick="changeArrow(this)"
-              >
-                  Show Details <i class="fa fa-caret-down"></i>
-              </a>
-            </label>
-            <div class="collapse" id="pi${index}">
-            <div class="card text-dark custom-bg card-body mb-2" style="width:100%">
-                <p class="fs-5 fw-normal text-primary mb-0">Key Features:</p>
-                <p class="fs-6 fw-light">${project.keyFeatures}</p>
-
-                <p class="fs-5 fw-normal text-primary mb-0">Tools and technologies</p>
-                <p class="fs-6 fw-light">${project.technologies}</p>
-
-                <p class="fs-5 fw-normal text-primary mb-0">Video Demo</p>
-
-                <a href=${
-                  project.projectDetailsLink
-                } target="_blank" class="fs-6 fw-light link-dark mb-2">${
-        project.projectDetailsLink
-      }</a>
-
-                <p class="fs-5 fw-normal text-primary mb-0">GitHub Link</p>
-                <div class="d-flex flex-column mb-2">
+        <div class="col-md-6">
+          <div class="d-flex border m-1">
+            <div class="card border-0 mb-2" style="width: 40%">
+              <img class="mb-2" src="${project.logo}" style="height: 12rem">
+              <span>
+                ${
+                  project.projectDetailsLink !== ""
+                    ? `<a href=${project.projectDetailsLink} target="_blank">
+                        <button class="btn btn-light border m-1">Watch Demo</button>
+                      </a>`
+                    : `<span></span>`
+                }
+                ${
+                  project.websiteLink !== ""
+                    ? `<a href=${project.websiteLink} target="_blank">
+                        <button class="btn btn-light border m-1">Visit Website</button>
+                      </a>`
+                    : `<span></span>`
+                }
+              </span>
+              <span>
+                <b class="me-2">Github Link(s): </b>
                 ${project.githubLink
                   .map(
                     (e, index) =>
-                      `<a href=${e.link} target="_blank" class="fs-6 fw-light link-dark me-2">${e.link}</a>`
+                      `<a href=${
+                        e.link
+                      } target="_blank" class="fw-light me-2">Link${
+                        index + 1
+                      }</a>`
                   )
                   .join("")}
-                </div>
-                
-                ${
-                  project.websiteLink !== ""
-                    ? `<p class="fs-5 fw-normal text-primary mb-0">Website Link</p>
-                    <a href=${project.websiteLink} target="_blank" class="fs-6 fw-light link-dark">${project.websiteLink}</a>`
-                    : ""
-                }
-
+              </span>
             </div>
+            <div class="card border-0 mb-2" style="width: 60%">
+              <div class="card-body">
+                <h4 class="fs-5 fw-bold">${project.name}</h4>
+                <p class="card-text">${project.keyFeatures}<p>
+                <b>Tools & Technologies used: ${project.technologies}</b>
+              </div>
             </div>
-        </li>
+          </div>
+        </div>
         `;
+    });
+  });
+
+fetch("resources/profile.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((profile, index) => {
+      profiles.innerHTML += `
+        <div class="col-md-3 col-sm-6" >
+          <a href="${profile.link}" target="_blank">
+            <img src="${profile.logo}" style=" height: 8rem" alt="">
+          </a>
+        </div>
+      `;
     });
   });
 

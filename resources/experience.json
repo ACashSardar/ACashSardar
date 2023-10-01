@@ -1,8 +1,9 @@
 [
     {
         "company":"Wipro Limited",
-        "location":"India",
+        "location":"Hyderabad, India",
         "role":"Developer L1",
-        "duration":"2022(Aug)-Present"
+        "duration":"Aug 2022-Present",
+        "logo":"./images/WiproLogo.svg"
     }
 ]
