@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@200&family=Lato:wght@100&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@400&family=Lato:wght@300&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
   --transparent-color: lightseagreen;
-  --main-font-family: Titillium Web;
-  --secondary-font-family: Titillium Web;
+  --main-font-family: Titillium web;
 }
 
 body {
@@ -60,7 +59,7 @@ body {
 
 .my-pic {
   height: 19rem;
-  width: 15rem;
+  width: 17rem;
   border-radius: 5px;
   border: 2px solid white;
 }
@@ -79,7 +78,7 @@ body {
 }
 
 .my-text {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .my-text a {
@@ -115,20 +114,18 @@ footer {
 
 @media screen and (max-width: 1000px) {
   #introduction {
-    height: 85vh;
-  }
-  #introduction .my-name {
-    font-size: 2.5rem;
+    padding: 2rem;
   }
 
-  #introduction .my-desc {
-    font-size: 1rem;
+  #introduction .my-text {
+    font-size: 14px;
   }
 
   .my-pic {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     height: 10rem;
-    width: 8rem;
+    width: 10rem;
   }
 
   .my-btn {
@@ -138,6 +135,7 @@ footer {
   }
 
   .my-btn {
+    margin-top: 2rem;
     font-size: 13px;
   }
 
