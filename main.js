@@ -19,14 +19,6 @@ function changeNavIcon() {
   }
 }
 
-window.onscroll = () => {
-  if (document.documentElement.scrollTop >= 680 || window.innerWidth < 600) {
-    navbar.style.background = "white";
-  } else {
-    navbar.style.background = "white";
-  }
-};
-
 function download(e) {
   var link = document.createElement("a");
   link.href = "./resources/Resume_Akash_Sardar.pdf";
@@ -113,10 +105,27 @@ fetch("resources/projects.json")
   .then((data) => {
     data.forEach((project, index) => {
       projectItems.innerHTML += `
-        <div class="col-md-6">
-          <div class="d-flex border m-1">
-            <div class="card border-0 mb-2" style="width: 40%">
-              <img class="mb-2" src="${project.logo}" style="height: 12rem">
+        <div class="col-md-4">
+          <div class="card border mb-5">
+            <img class="border rounded-top" src="${
+              project.logo
+            }" style="height: 14rem">
+            <div class="card-body text-left">
+              <h4 class="fs-5 fw-bold">${project.name}</h4>
+              <p class="card-text">${project.description}<p>
+              <span>
+                <b class="me-2">Github Link(s): </b>
+                ${project.githubLink
+                  .map(
+                    (e, index) =>
+                      `<a href=${
+                        e.link
+                      } target="_blank" class="fw-light me-2">Link${
+                        index + 1
+                      }</a>`
+                  )
+                  .join("")}
+              </span>
               <span>
                 ${
                   project.projectDetailsLink !== ""
@@ -133,26 +142,6 @@ fetch("resources/projects.json")
                     : `<span></span>`
                 }
               </span>
-              <span>
-                <b class="me-2">Github Link(s): </b>
-                ${project.githubLink
-                  .map(
-                    (e, index) =>
-                      `<a href=${
-                        e.link
-                      } target="_blank" class="fw-light me-2">Link${
-                        index + 1
-                      }</a>`
-                  )
-                  .join("")}
-              </span>
-            </div>
-            <div class="card border-0 mb-2" style="width: 60%">
-              <div class="card-body">
-                <h4 class="fs-5 fw-bold">${project.name}</h4>
-                <p class="card-text">${project.keyFeatures}<p>
-                <b>Tools & Technologies used: ${project.technologies}</b>
-              </div>
             </div>
           </div>
         </div>

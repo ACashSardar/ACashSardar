@@ -2,8 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --transparent-color: lightseagreen;
-  --main-font-family: Titillium web;
+  --main-font-family: Titillium Web;
 }
 
 body {
@@ -29,22 +28,20 @@ body {
 }
 
 .navbar {
-  background: lavender;
-}
-
-.navbar--scrolled {
-  background-color: grey;
+  background: lightgray;
 }
 
 .nav-link {
-  color: black;
+  color: rgb(7, 75, 75);
   font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
   margin-right: 10px;
 }
 
 .nav-item a:hover {
   transition: all 0.2s ease;
-  color: dodgerblue;
+  color: orangered;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 22px;
@@ -59,8 +56,8 @@ body {
 
 .my-pic {
   height: 19rem;
-  width: 17rem;
-  border-radius: 5px;
+  width: 19rem;
+  border-radius: 0;
   border: 2px solid white;
 }
 

@@ -1,8 +1,7 @@
 [
     {
         "name":"Fullstack E-Commerce Website",
-        "keyFeatures":"CRUD operations, post creation, liking and commenting on posts, user follow/unfollow, pagination, keyword-based filtering, markdown support, email-based authentication, role-based authorization, and admin panel for user and content management.",
-        "technologies":"Java, Spring Boot, Spring Security, React JS,Bootstrap CSS, MySQL, Postman API client, Spring tool suite, VS code.",
+        "description":"This project is a fullstack e-commerce website featuring CRUD operations, authentication, authorization, filtering, shopping cart, order tracking, and product reviews. It is implemented using Java, Spring Boot, React JS and MySQL.",
         "projectDetailsLink":"https://www.youtube.com/watch?v=DdTnjtAAVc4&t=1s",
         "githubLink":[
             {
@@ -18,8 +17,7 @@
     },
     {
         "name":"Travel Blog Website",
-        "keyFeatures":"Decoupled frontend and backend, REST API communication, CRUD operations, email-based authentication, role-based authorization, category-based filtering, shopping cart, order tracking, product review, and rating.",
-        "technologies":"Java, Spring Boot, Spring Security, JavaScript,Thymeleaf template, Bootstrap CSS, MySQL, Spring tool suite.",
+        "description":"This project is a travel blog website featuring CRUD operations, user interactions, authentication, authorization, and an admin panel. It utilizes Java, Spring Boot, HTML, CSS, Bootstrap, and MySQL for development.",
         "projectDetailsLink":"https://www.youtube.com/watch?v=ELPcKY7Cx_k&t=58s",
         "githubLink":[
             {
@@ -32,8 +30,7 @@
     },
     {
         "name":"Algorithm Visualizer",
-        "keyFeatures":"Visualization of sorting algorithms, backtracking problems (Sudoku), BFS and DFS traversal, recursion problem (Tower of Hanoi), and dynamic programming problem (Longest Common Subsequence).",
-        "technologies":"Html, CSS, JavaScript, and Bootstrap.",
+        "description":"My Algorithm Visualizer simulates various algorithms, including sorting algorithms, BFS and DFS traversal, recursion, backtracking and more. It is implemented using HTML, CSS, JS, and Bootstrap for the user interface.",
         "projectDetailsLink":"",
         "githubLink":[
             {
@@ -45,8 +42,7 @@
     },
     {
         "name":"News Website",
-        "keyFeatures":"“No-reload UI”, News updates, Searching & filtering based on news category, news channel, etc., On-demand weather report.",
-        "technologies":"Bootstrap, CSS, JavaScript, ReactJS, ExpressJS, News API from newsapi.org and Weather API from openweathermap.org.",
+        "description":"A News Website with real-time updates, search and filter options, and on-demand weather reports. It's built using Bootstrap, CSS, JavaScript, ReactJS, ExpressJS, and utilizes News API and Weather API for data.",
         "projectDetailsLink":"",
         "githubLink":[
             {
