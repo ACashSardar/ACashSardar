@@ -33,15 +33,15 @@ body {
 
 .nav-link {
   color: rgb(7, 75, 75);
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 1px;
   margin-right: 10px;
 }
 
 .nav-item a:hover {
   transition: all 0.2s ease;
-  color: orangered;
+  color: darkcyan;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 22px;
