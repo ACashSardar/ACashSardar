@@ -48,15 +48,15 @@ fetch("resources/education.json")
           <div class="p-2" style="width: 90%">
             <div class="d-flex justify-content-between">
                 <label class="fs-5 fw-bold custom-text-color">${edu.institutionName}</label>
-                <label class="fs-6 fw-bold pt-2">${edu.institutionType}</label>
+                <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${edu.location}</label>
             </div >
             <div class="d-flex justify-content-between">
               <p class="fs-6 fw-light mb-0">${edu.degree}</p>
-              <p class="fs-6 fw-normal mb-0">${edu.score}</p>
+              <p class="fs-6 fw-light mb-0">${edu.duration}</p>
             </div>
             <div class="d-flex justify-content-between">
               <p class="fs-6 fw-light mb-0">${edu.branch}</p>
-              <p class="fs-6 fw-light mb-0">${edu.duration}</p>
+              <p class="fs-6 fw-normal mb-0">${edu.score}</p>
             </div>
           </div>
         </li>
@@ -76,11 +76,14 @@ fetch("resources/experience.json")
           <div class="p-2" style="width: 90%">
             <div class="d-flex justify-content-between">
                 <label class="fs-4 fw-bold custom-text-color">${exp.company}</label>
-                <label class="fs-6 fw-bold pt-2">${exp.location}</label>
+                <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${exp.location}</label>
             </div>
             <div class="d-flex justify-content-between">
-                <label class="fs-6 fw-normal custom-text-color">Role: ${exp.role}</label>
-                <label class="fs-6 fw-light pt-2">${exp.duration}</label>
+                <label class="fs-6 fw-light custom-text-color">Role: ${exp.role}</label>
+                <label class="fs-6 fw-light">${exp.duration}</label>
+            </div>
+            <div class="d-flex justify-content-between">
+                <label class="fs-6 fw-light custom-text-color">Client: ${exp.client}</label>
             </div>
           </div>
         </li>
@@ -94,7 +97,7 @@ fetch("resources/skills.json")
     data.forEach((skill, index) => {
       skillset.innerHTML += `
         <div class="col-md-2 col-sm-6" >
-          <img src="${skill.logo}" style="height: 8rem" alt="">
+          <img src="${skill.logo}" style="height: 6rem; margin: 5px; alt="">
         </div>
       `;
     });
@@ -109,7 +112,7 @@ fetch("resources/projects.json")
           <div class="card bg-light border rounded-0 mb-5">
             <img class="rounded-0" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
-              <h3 class="fw-bold">${project.name}</h3>
+              <h4 class="fw-bold">${project.name}</h4>
               <p class="card-text">${project.description}<p>
               <span class="badge bg-light text-dark border rounded-0 fs-6 fw-light p-3">
                 <b class="me-2">Github Link(s): </b>

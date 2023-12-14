@@ -2,8 +2,9 @@
     {
         "company":"Wipro Limited",
         "location":"Hyderabad, India",
-        "role":"Developer L1",
+        "role":"Java Backend Developer",
         "duration":"Aug 2022-Present",
-        "logo":"./images/WiproLogo.svg"
+        "logo":"./images/WiproLogo.svg",
+        "client":"Uber Technologies Inc."
     }
 ]

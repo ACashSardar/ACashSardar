@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@400&family=Lato:wght@300&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@400&family=Lato:wght@300&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Titillium Web;
+  --main-font-family: Calibri;
 }
 
 body {
@@ -28,20 +28,20 @@ body {
 }
 
 .navbar {
-  background: lightgray;
+  background: white;
+  border-bottom: 1px solid lavender;
 }
 
 .nav-link {
-  color: rgb(7, 75, 75);
+  color: black;
   font-size: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 1px;
   margin-right: 10px;
 }
 
 .nav-item a:hover {
   transition: all 0.2s ease;
-  color: darkcyan;
+  color: darkgreen;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 22px;
@@ -55,10 +55,11 @@ body {
 }
 
 .my-pic {
-  height: 19rem;
-  width: 19rem;
+  height: 18rem;
+  width: 14rem;
   border-radius: 0;
   border: 2px solid white;
+  margin-top: 10px;
 }
 
 #introduction {

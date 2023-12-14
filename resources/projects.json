@@ -29,28 +29,16 @@
         
     },
     {
-        "name":"Algorithm Visualizer",
-        "description":"My Algorithm Visualizer simulates various algorithms, including sorting algorithms, BFS and DFS traversal, recursion, backtracking and more. It is implemented using HTML, CSS, JS, and Bootstrap for the user interface.",
+        "name":"Image gallery Website",
+        "description":"This website makes use of a 3rd party API( form Pexel) to fetch images images and videos. It is built using React JS with featurs like search and pagenation.",
         "projectDetailsLink":"",
         "githubLink":[
             {
-                "link":"https://github.com/ACashSardar/AlgorithmVisualizer.git"
-            }
-        ],
-        "websiteLink":"https://acashsardar.github.io/AlgorithmVisualizer",
-        "logo":"./images/AlgorithmVisualizer.png"
-    },
-    {
-        "name":"News Website",
-        "description":"A News Website with real-time updates, search and filter options, and on-demand weather reports. It's built using Bootstrap, CSS, JavaScript, ReactJS, ExpressJS, and utilizes News API and Weather API for data.",
-        "projectDetailsLink":"",
-        "githubLink":[
-            {
-                "link":"https://github.com/ACashSardar/Reactjs-news-website.git"
+                "link":"https://image-gallery-akash.netlify.app/"
             }
         ],
         "websiteLink":"https://react-news-app-akash.netlify.app",
-        "logo":"./images/NewsApp.png"
+        "logo":"./images/ImageGallery.png"
     }
 
 ]

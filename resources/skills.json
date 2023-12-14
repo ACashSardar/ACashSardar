@@ -1,5 +1,8 @@
 [
     {
+        "logo":"./images/DSA.png"
+    },
+    {
         "logo":"./images/Java.png"
     },
     {
@@ -7,6 +10,12 @@
     },
     {
         "logo":"./images/RestAPI.png"
+    },
+    {
+        "logo":"./images/Postman.png"
+    },
+    {
+        "logo":"./images/MySQL.png"
     },
     {
         "logo":"./images/HTML.png"
@@ -18,9 +27,12 @@
         "logo":"./images/JavaScript.png"
     },
     {
-        "logo":"./images/MySQL.png"
+        "logo":"./images/Bootstrap.png"
     },
     {
-        "logo":"./images/DSA.png"
+        "logo":"./images/ReactJS.png"
+    },
+    {
+        "logo":"./images/Git.png"
     }
 ]
