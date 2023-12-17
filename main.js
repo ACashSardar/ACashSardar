@@ -109,19 +109,19 @@ fetch("resources/projects.json")
     data.forEach((project, index) => {
       projectItems.innerHTML += `
         <div class="col-md-4">
-          <div class="card bg-light border rounded-0 mb-5">
+          <div class="card border rounded-0 mb-5">
             <img class="rounded-0" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
               <h4 class="fw-bold">${project.name}</h4>
               <p class="card-text">${project.description}<p>
-              <span class="badge bg-light text-dark border rounded-0 fs-6 fw-light p-3">
+              <span class="badge text-dark rounded-0 fs-6 fw-light p-3">
                 <b class="me-2">Github Link(s): </b>
                 ${project.githubLink
                   .map(
                     (e, index) =>
                       `<a href=${
                         e.link
-                      } target="_blank" class="fw-light me-2">Link${
+                      } target="_blank" class="fw-bold me-2">Link${
                         index + 1
                       }</a>`
                   )
@@ -131,14 +131,14 @@ fetch("resources/projects.json")
                 ${
                   project.projectDetailsLink !== ""
                     ? `<a href=${project.projectDetailsLink} target="_blank">
-                        <button class="btn btn-primary rounded-0 fs-6 fw-light p-2">Watch Demo</button>
+                        <button class="btn btn-danger fw-bold rounded-0 fs-6 fw-light py-2 px-4">Watch Demo</button>
                       </a>`
                     : `<span></span>`
                 }
                 ${
                   project.websiteLink !== ""
                     ? `<a href=${project.websiteLink} target="_blank">
-                        <button class="btn btn-primary rounded-0 p-2 m-1">Visit Website</button>
+                        <button class="btn btn-danger fw-bold rounded-0 py-2 px-4 m-1">Visit Website</button>
                       </a>`
                     : `<span></span>`
                 }

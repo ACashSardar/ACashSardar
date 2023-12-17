@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Titillium Web;
+  --main-font-family: Calibri;
 }
 
 body {
@@ -28,12 +28,11 @@ body {
 }
 
 .navbar {
-  background: white;
-  border-bottom: 1px solid lavender;
+  background: rgb(20, 0, 20);
 }
 
 .nav-link {
-  color: black;
+  color: white;
   font-size: 20px;
   letter-spacing: 1px;
   margin-right: 10px;
@@ -41,11 +40,12 @@ body {
 
 .nav-item a:hover {
   transition: all 0.2s ease;
-  color: purple;
+  color: yellow;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 22px;
 }
+
 #nav-btn {
   font-size: 30px;
 }
@@ -94,11 +94,12 @@ body {
 }
 
 .my-text {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom right,
     rgb(255, 255, 255, 0.3),
     rgb(255, 255, 255, 0.1)
-  );
+  ); */
+  background: radial-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.3));
   font-size: 20px;
   padding: 20px;
   border-radius: 5px;
