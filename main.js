@@ -109,8 +109,8 @@ fetch("resources/projects.json")
     data.forEach((project, index) => {
       projectItems.innerHTML += `
         <div class="col-md-4">
-          <div class="card border rounded-0 mb-5">
-            <img class="rounded-0" src="${project.logo}" style="height: 14rem">
+          <div class="card border-0 rounded-2 mb-5">
+            <img class="rounded-2" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
               <h4 class="fw-bold">${project.name}</h4>
               <p class="card-text">${project.description}<p>
