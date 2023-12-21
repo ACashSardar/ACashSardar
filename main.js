@@ -12,10 +12,10 @@ const colors = ["darkcyan", "lime", "orangered"];
 function changeNavIcon() {
   if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
     navBtn.innerHTML = '<i class="fa fa-bars"></i>';
-    navBtn.style.color = "grey";
+    navBtn.style.color = "white";
   } else {
     navBtn.innerHTML = '<i class="fa fa-times"></i>';
-    navBtn.style.color = "red";
+    navBtn.style.color = "white";
   }
 }
 
@@ -131,14 +131,14 @@ fetch("resources/projects.json")
                 ${
                   project.projectDetailsLink !== ""
                     ? `<a href=${project.projectDetailsLink} target="_blank">
-                        <button class="btn btn-danger fw-bold rounded-0 fs-6 fw-light py-2 px-4">Watch Demo</button>
+                        <button class="btn btn-danger fw-bold fs-6 fw-light py-2 px-4">Watch Demo <i class="fa fa-youtube-play"></i></button>
                       </a>`
                     : `<span></span>`
                 }
                 ${
                   project.websiteLink !== ""
                     ? `<a href=${project.websiteLink} target="_blank">
-                        <button class="btn btn-danger fw-bold rounded-0 py-2 px-4 m-1">Visit Website</button>
+                        <button class="btn btn-danger fw-bold py-2 px-4 m-1">Visit Website <i class="fa fa-globe"></i></button>
                       </a>`
                     : `<span></span>`
                 }
