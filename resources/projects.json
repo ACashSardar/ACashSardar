@@ -1,7 +1,7 @@
 [
     {
         "name":"Fullstack E-Commerce Website",
-        "description":"This project is a fullstack e-commerce website featuring CRUD operations, authentication, authorization, filtering, shopping cart, order tracking, and product reviews. It is implemented using Java, Spring Boot, React JS and MySQL.",
+        "description":"",
         "projectDetailsLink":"https://www.youtube.com/watch?v=DdTnjtAAVc4&t=1s",
         "githubLink":[
             {
@@ -17,7 +17,7 @@
     },
     {
         "name":"Travel Blog Website",
-        "description":"This project is a travel blog website featuring CRUD operations, user interactions, authentication, authorization, and an admin panel. It utilizes Java, Spring Boot, HTML, CSS, Bootstrap, and MySQL for development.",
+        "description":"",
         "projectDetailsLink":"https://www.youtube.com/watch?v=ELPcKY7Cx_k&t=58s",
         "githubLink":[
             {
@@ -30,14 +30,14 @@
     },
     {
         "name":"Image gallery Website",
-        "description":"This website makes use of a 3rd party API( form Pexel) to fetch images images and videos. It is built using React JS with featurs like search and pagenation.",
+        "description":"",
         "projectDetailsLink":"",
         "githubLink":[
             {
                 "link":"https://image-gallery-akash.netlify.app/"
             }
         ],
-        "websiteLink":"https://react-news-app-akash.netlify.app",
+        "websiteLink":"https://image-gallery-akash.netlify.app/",
         "logo":"./images/ImageGallery.png"
     }
 

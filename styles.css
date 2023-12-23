@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Klee One;
+  --main-font-family: Fuzzy Bubbles;
 }
 
 body {
@@ -10,10 +10,6 @@ body {
   padding: 0;
   background: var(--main-bg-color);
   font-family: var(--main-font-family);
-}
-
-.custom-text-color {
-  color: var(--main-fg-color);
 }
 
 .custom-bg {
@@ -30,8 +26,7 @@ body {
 .navbar {
   background: rgb(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid white;
-  box-shadow: 1px 1px 10px grey;
+  border-bottom: 2px solid rgb(255, 255, 255, 0.3);
 }
 
 .nav-link {
@@ -39,6 +34,7 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
   margin-right: 10px;
+  text-shadow: 2px 1px 20px black;
 }
 
 .nav-item a:hover {
@@ -63,18 +59,20 @@ body {
   font-size: 45px;
   letter-spacing: 3px;
   font-weight: bold;
+  color: white;
+  text-shadow: 1 1 5px blue, 1 1 5px red;
 }
 
 .my-pic {
   position: relative;
   height: 22rem;
-  width: 22rem;
+  width: 20rem;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 2px solid rgb(255, 255, 255, 0.3);
   background: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.1));
   backdrop-filter: blur(10px);
   padding: 15px;
-  box-shadow: 1px 1px 10px grey;
+  box-shadow: 1px 2px 50px black;
 }
 .my-pic img {
   width: 100%;
@@ -96,43 +94,41 @@ body {
 }
 
 .my-text {
-  border: 1px solid white;
+  border: 2px solid rgb(255, 255, 255, 0.3);
   background: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.1));
   backdrop-filter: blur(10px);
   font-size: 20px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px grey;
+  box-shadow: 1px 2px 50px black;
 }
 
 .my-text a {
   font-size: 25px;
   text-decoration: none;
+  text-shadow: 2px 2px 10px black;
   color: white;
   margin-right: 10px;
+  border-radius: 20%;
 }
 
 .my-text a:hover {
-  color: yellow;
+  color: wheat;
   transition: all 0.3s ease;
 }
 
 .download-btn {
   color: white;
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid white;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 8px 10px;
   font-size: 16px;
 }
 
 .download-btn:hover {
-  transition: all 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.education {
-  width: 60%;
+  transition: all 0.5s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #profile img:hover {
@@ -150,22 +146,32 @@ footer {
   align-items: center;
 }
 
+.tech-logo {
+  height: 5rem;
+  margin: 5px;
+}
+
+.profile-logo {
+  height: 8rem;
+  margin: 5px;
+}
+
 @media screen and (max-width: 1000px) {
   #introduction {
     padding: 2rem;
   }
 
   #introduction .my-text {
-    font-size: 14px;
+    font-size: 16px;
   }
   .my-name {
-    font-size: 20px;
+    font-size: 30px;
   }
   .my-pic {
     margin-top: 2rem;
     margin-bottom: 1rem;
     height: 12rem;
-    width: 12rem;
+    width: 11rem;
   }
 
   .my-btn {
@@ -188,5 +194,14 @@ footer {
   }
   .download-btn {
     font-size: 12px;
+  }
+
+  .tech-logo {
+    height: 3rem;
+    margin: 10px 2px;
+  }
+  .profile-logo {
+    height: 3rem;
+    margin: 2px;
   }
 }

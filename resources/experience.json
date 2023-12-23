@@ -5,6 +5,7 @@
         "role":"Java Backend Developer",
         "duration":"Aug 2022-Present",
         "logo":"./images/WiproLogo.svg",
-        "client":"Uber Technologies Inc."
+        "client":"Uber Technologies Inc.",
+        "type": "On-site"
     }
 ]

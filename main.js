@@ -41,25 +41,27 @@ fetch("resources/education.json")
   .then((data) => {
     data.forEach((edu, index) => {
       educationItems.innerHTML += `
-        <li class="list-group-item education mx-auto d-flex justify-content-center border-0">
-          <div class="p-2">
-            <img src=${edu.logo}  style="height: 6rem; width: 6rem">
-          </div>
-          <div class="p-2" style="width: 90%">
-            <div class="d-flex justify-content-between">
+        <div class="row m-0 mb-3">
+          <div class="col-md-6 d-flex justify-content-center">
+              <span class="me-3">
+                <img src=${edu.logo}  style="height: 5rem; width: 5rem;">
+              </span>
+              <span class="text-start">
                 <label class="fs-5 fw-bold custom-text-color">${edu.institutionName}</label>
+                <p class="fs-6 fw-light text-secondary mb-0">${edu.degree}</p>
+                <p class="fs-6 fw-light text-secondary mb-0">${edu.branch}</p>
+              </span>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="d-flex">
+              <span class="text-start">
                 <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${edu.location}</label>
-            </div >
-            <div class="d-flex justify-content-between">
-              <p class="fs-6 fw-light mb-0">${edu.degree}</p>
-              <p class="fs-6 fw-light mb-0">${edu.duration}</p>
-            </div>
-            <div class="d-flex justify-content-between">
-              <p class="fs-6 fw-light mb-0">${edu.branch}</p>
-              <p class="fs-6 fw-normal mb-0">${edu.score}</p>
+                <p class="fs-6 fw-light text-secondary mb-0">${edu.duration}</p>
+                <p class="fs-6 fw-normal text-secondary mb-0">${edu.score}</p>
+              </span>
             </div>
           </div>
-        </li>
+        </div>
       `;
     });
   });
@@ -69,24 +71,27 @@ fetch("resources/experience.json")
   .then((data) => {
     data.forEach((exp, index) => {
       experienceItems.innerHTML += `
-        <li class="list-group-item education mx-auto d-flex justify-content-center border-0">
-          <div class="p-2 pb-3">
-            <img src=${exp.logo} style="height: 6rem; width: 6rem">
+        <div class="row m-0 mb-3">
+          <div class="col-md-6 d-flex justify-content-center">
+              <span class="me-3">
+                <img src=${exp.logo}  style="height: 5rem; width: 5rem;">
+              </span>
+              <span class="text-start">
+                <label class="fs-5 fw-bold custom-text-color">${exp.company}</label>
+                <p class="fs-6 fw-light text-secondary mb-0">Role: ${exp.role}</p>
+                <p class="fs-6 fw-light text-secondary mb-0">Client: ${exp.client}</p>
+              </span>
           </div>
-          <div class="p-2" style="width: 90%">
-            <div class="d-flex justify-content-between">
-                <label class="fs-4 fw-bold custom-text-color">${exp.company}</label>
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="d-flex">
+              <span class="text-start">
                 <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${exp.location}</label>
-            </div>
-            <div class="d-flex justify-content-between">
-                <label class="fs-6 fw-light custom-text-color">Role: ${exp.role}</label>
-                <label class="fs-6 fw-light">${exp.duration}</label>
-            </div>
-            <div class="d-flex justify-content-between">
-                <label class="fs-6 fw-light custom-text-color">Client: ${exp.client}</label>
+                <p class="fs-6 fw-light text-secondary mb-0">${exp.duration}</p>
+                <p class="fs-6 fw-light text-secondary mb-0">Type: ${exp.type}</p>
+              </span>
             </div>
           </div>
-        </li>
+        </div>
       `;
     });
   });
@@ -96,8 +101,8 @@ fetch("resources/skills.json")
   .then((data) => {
     data.forEach((skill, index) => {
       skillset.innerHTML += `
-        <div class="col-md-2 col-sm-6" >
-          <img src="${skill.logo}" style="height: 6rem; margin: 5px; alt="">
+        <div class="col-md-2 col-2" >
+          <img src="${skill.logo}" class="tech-logo" alt="">
         </div>
       `;
     });
@@ -113,7 +118,7 @@ fetch("resources/projects.json")
             <img class="rounded-2" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
               <h4 class="fw-bold">${project.name}</h4>
-              <p class="card-text">${project.description}<p>
+              <p class="card-text text-secondary">${project.description}<p>
               <span class="badge text-dark rounded-0 fs-6 fw-light p-3">
                 <b class="me-2">Github Link(s): </b>
                 ${project.githubLink
@@ -131,14 +136,14 @@ fetch("resources/projects.json")
                 ${
                   project.projectDetailsLink !== ""
                     ? `<a href=${project.projectDetailsLink} target="_blank">
-                        <button class="btn btn-danger fw-bold fs-6 fw-light py-2 px-4">Watch Demo <i class="fa fa-youtube-play"></i></button>
+                        <button class="btn btn-sm btn-danger fw-bold fs-6 fw-light">Watch Demo <i class="fa fa-youtube-play"></i></button>
                       </a>`
                     : `<span></span>`
                 }
                 ${
                   project.websiteLink !== ""
                     ? `<a href=${project.websiteLink} target="_blank">
-                        <button class="btn btn-danger fw-bold py-2 px-4 m-1">Visit Website <i class="fa fa-globe"></i></button>
+                        <button class="btn btn-sm btn-danger fw-bold">Visit Website <i class="fa fa-globe"></i></button>
                       </a>`
                     : `<span></span>`
                 }
@@ -155,9 +160,9 @@ fetch("resources/profile.json")
   .then((data) => {
     data.forEach((profile, index) => {
       profiles.innerHTML += `
-        <div class="col-md-3 col-sm-6" >
+        <div class="col-3" >
           <a href="${profile.link}" target="_blank">
-            <img src="${profile.logo}" style=" height: 8rem" alt="">
+            <img src="${profile.logo}" class="profile-logo" alt="">
           </a>
         </div>
       `;
