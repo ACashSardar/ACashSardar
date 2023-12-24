@@ -118,7 +118,6 @@ fetch("resources/projects.json")
             <img class="rounded-2" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
               <h4 class="fw-bold">${project.name}</h4>
-              <p class="card-text text-secondary">${project.description}<p>
               <span class="badge text-dark rounded-0 fs-6 fw-light p-3">
                 <b class="me-2">Github Link(s): </b>
                 ${project.githubLink
@@ -131,7 +130,7 @@ fetch("resources/projects.json")
                       }</a>`
                   )
                   .join("")}
-              </span>
+              </span><br/>
               <span>
                 ${
                   project.projectDetailsLink !== ""
