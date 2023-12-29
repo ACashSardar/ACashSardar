@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@400&family=Lato:wght@300&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@200&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@200&family=Pacifico&family=Poppins:wght@100&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Fuzzy Bubbles;
+  --main-font-family: Lato;
 }
 
 body {
@@ -21,6 +21,19 @@ body {
 
 .custom-navbar {
   background: #333;
+}
+
+.custom-btn {
+  color: white;
+  background-color: blueviolet;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0;
+}
+
+.custom-btn:hover {
+  transition: all 0.3s ease;
+  background-color: rgba(137, 43, 226, 0.8);
 }
 
 .navbar {
@@ -197,8 +210,8 @@ footer {
   }
 
   .tech-logo {
-    height: 3rem;
-    margin: 10px 2px;
+    height: 2.5rem;
+    margin: 10px 1px;
   }
   .profile-logo {
     height: 3rem;

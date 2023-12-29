@@ -135,14 +135,14 @@ fetch("resources/projects.json")
                 ${
                   project.projectDetailsLink !== ""
                     ? `<a href=${project.projectDetailsLink} target="_blank">
-                        <button class="btn btn-sm btn-danger fw-bold fs-6 fw-light">Watch Demo <i class="fa fa-youtube-play"></i></button>
+                        <button class="custom-btn">Watch Demo <i class="fa fa-youtube-play"></i></button>
                       </a>`
                     : `<span></span>`
                 }
                 ${
                   project.websiteLink !== ""
                     ? `<a href=${project.websiteLink} target="_blank">
-                        <button class="btn btn-sm btn-danger fw-bold">Visit Website <i class="fa fa-globe"></i></button>
+                        <button class="custom-btn">Visit Website <i class="fa fa-globe"></i></button>
                       </a>`
                     : `<span></span>`
                 }
