@@ -1,5 +1,9 @@
 [
     {
+        "link":"https://www.linkedin.com/in/akash-sardar-118858184/",
+        "logo":"./images/Linkedin.png"
+    },    
+    {
         "link":"https://leetcode.com/Akash-Sardar/",
         "logo":"./images/Leetcode.png"
     },
@@ -10,6 +14,10 @@
     {
         "link":"https://www.codechef.com/users/akash_sardar",
         "logo":"./images/Codechef.webp"
+    },
+    {
+        "link":"https://auth.geeksforgeeks.org/user/akashsardar383/?utm_source=geeksforgeeks&utm_medium=my_profile&utm_campaign=auth_user",
+        "logo":"./images/Geeksforgeeks.png"
     },
     {
         "link":"https://github.com/ACashSardar",

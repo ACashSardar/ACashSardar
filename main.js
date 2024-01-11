@@ -159,7 +159,7 @@ fetch("resources/profile.json")
   .then((data) => {
     data.forEach((profile, index) => {
       profiles.innerHTML += `
-        <div class="col-3" >
+        <div class="col-md-2 col-4" >
           <a href="${profile.link}" target="_blank">
             <img src="${profile.logo}" class="profile-logo" alt="">
           </a>
