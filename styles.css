@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@200&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Titillium Web;
+  --main-font-family: Fuzzy Bubbles;
 }
 
 body {
@@ -39,11 +39,11 @@ body {
 .navbar {
   background: rgb(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
-  border-bottom: 2px solid rgb(255, 255, 255, 0.3);
+  border-bottom: 5px solid rgb(255, 255, 255, 0.3);
 }
 
 .nav-link {
-  color: white;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 20px;
   letter-spacing: 1px;
   margin-right: 10px;
@@ -57,7 +57,7 @@ body {
   font-size: 20px;
   text-decoration: underline 5px;
   text-underline-position: under;
-  text-underline-offset: 22px;
+  text-underline-offset: 27px;
 }
 
 #nav-btn {
@@ -70,28 +70,26 @@ body {
 
 .my-name {
   font-size: 55px;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 20px black;
+  color: rgb(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 20px black;
 }
 
 .my-pic {
   position: relative;
   height: 22rem;
   width: 20rem;
-  border-radius: 5px;
-  border: 2px solid rgb(255, 255, 255, 0.3);
-  background: radial-gradient(rgb(0, 0, 0, 0.2), rgba(100, 100, 100, 0.2));
+  border-radius: 10px;
+  border: 5px solid rgb(255, 255, 255, 0.3);
+  background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.2));
   backdrop-filter: blur(10px);
-  padding: 2px;
   box-shadow: 1px 2px 50px black;
 }
 .my-pic img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  border: 1px solid solid rgb(255, 255, 255, 0.3);
 }
 
 #introduction {
@@ -107,12 +105,12 @@ body {
 }
 
 .my-text {
-  border: 2px solid rgb(255, 255, 255, 0.3);
-  background: radial-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.1));
+  border: 5px solid rgb(255, 255, 255, 0.3);
+  background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.2));
   backdrop-filter: blur(10px);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: 5px;
+  font-size: 18px;
+  padding: 22px;
+  border-radius: 10px;
   box-shadow: 1px 2px 50px black;
 }
 
@@ -134,7 +132,7 @@ body {
 .download-btn {
   color: white;
   background: rgba(0, 0, 0, 0);
-  border: 2px solid rgb(255, 255, 255, 0.3);
+  border: 3px solid rgb(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 8px 10px;
   font-size: 16px;
@@ -143,7 +141,7 @@ body {
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
   background: rgba(0, 0, 0, 0.4);
-  border: 2px solid lightseagreen;
+  border: 3px solid yellow;
 }
 
 #profile img:hover {
