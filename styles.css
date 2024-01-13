@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Fuzzy Bubbles;
+  --main-font-family: Titillium Web;
 }
 
 body {
@@ -72,7 +72,7 @@ body {
   font-size: 55px;
   letter-spacing: 6px;
   font-weight: bold;
-  color: rgb(255, 255, 255, 0.8);
+  color: skyblue;
   text-shadow: 1px 1px 20px black;
 }
 
@@ -141,7 +141,7 @@ body {
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
   background: rgba(0, 0, 0, 0.4);
-  border: 3px solid yellow;
+  border: 3px solid skyblue;
 }
 
 #profile img:hover {

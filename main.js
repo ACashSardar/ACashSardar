@@ -48,16 +48,16 @@ fetch("resources/education.json")
               </span>
               <span class="text-start">
                 <label class="fs-5 fw-bold custom-text-color">${edu.institutionName}</label>
-                <p class="fs-6 fw-light text-secondary mb-0">${edu.degree}</p>
-                <p class="fs-6 fw-light text-secondary mb-0">${edu.branch}</p>
+                <p class="fs-6 text-secondary mb-0">${edu.degree}</p>
+                <p class="fs-6 text-secondary mb-0">${edu.branch}</p>
               </span>
           </div>
           <div class="col-md-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
                 <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${edu.location}</label>
-                <p class="fs-6 fw-light text-secondary mb-0">${edu.duration}</p>
-                <p class="fs-6 fw-normal text-secondary mb-0">${edu.score}</p>
+                <p class="fs-6 text-secondary mb-0">${edu.duration}</p>
+                <p class="fs-6 text-secondary mb-0">${edu.score}</p>
               </span>
             </div>
           </div>
@@ -78,16 +78,16 @@ fetch("resources/experience.json")
               </span>
               <span class="text-start">
                 <label class="fs-5 fw-bold custom-text-color">${exp.company}</label>
-                <p class="fs-6 fw-light text-secondary mb-0">Role: ${exp.role}</p>
-                <p class="fs-6 fw-light text-secondary mb-0">Client: ${exp.client}</p>
+                <p class="fs-6 text-secondary mb-0">Role: ${exp.role}</p>
+                <p class="fs-6 text-secondary mb-0">Client: ${exp.client}</p>
               </span>
           </div>
           <div class="col-md-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
                 <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${exp.location}</label>
-                <p class="fs-6 fw-light text-secondary mb-0">${exp.duration}</p>
-                <p class="fs-6 fw-light text-secondary mb-0">Type: ${exp.type}</p>
+                <p class="fs-6 text-secondary mb-0">${exp.duration}</p>
+                <p class="fs-6 text-secondary mb-0">Type: ${exp.type}</p>
               </span>
             </div>
           </div>
