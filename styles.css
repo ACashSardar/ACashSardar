@@ -25,7 +25,7 @@ body {
 
 .custom-btn {
   color: white;
-  background-color: rgb(83, 0, 128);
+  background-color: darkcyan;
   border-radius: 5px;
   padding: 8px 20px;
   border: 0;
@@ -33,7 +33,7 @@ body {
 
 .custom-btn:hover {
   transition: all 0.3s ease;
-  background-color: rgba(94, 0, 125, 0.8);
+  background-color: lightseagreen;
 }
 
 .navbar {
@@ -69,8 +69,8 @@ body {
 }
 
 .my-name {
-  font-size: 55px;
-  letter-spacing: 6px;
+  font-size: 40px;
+  letter-spacing: 2px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 20px black;
@@ -79,9 +79,9 @@ body {
 .my-pic {
   position: relative;
   height: 22rem;
-  width: 22rem;
+  width: 25rem;
   border-radius: 10px;
-  border: 3px solid rgb(255, 255, 255, 0.3);
+  border: 2px solid rgb(255, 255, 255, 0.3);
   background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.2));
   backdrop-filter: blur(5px);
   box-shadow: 1px 2px 50px black;
@@ -96,7 +96,7 @@ body {
 #introduction {
   width: 100%;
   height: 100vh;
-  background-image: url(./images/portfolio-bg1.jpg);
+  background-image: url(./images/portfolio-bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -106,7 +106,7 @@ body {
 }
 
 .my-text {
-  border: 3px solid rgb(255, 255, 255, 0.3);
+  border: 2px solid rgb(255, 255, 255, 0.3);
   background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.2));
   backdrop-filter: blur(10px);
   font-size: 18px;
@@ -125,7 +125,7 @@ body {
 }
 
 .my-text a:hover {
-  color: yellow;
+  color: cyan;
   transition: all 0.3s ease;
   text-shadow: 2px 2px 10px lightseagreen;
 }
@@ -133,7 +133,7 @@ body {
 .download-btn {
   color: white;
   background: rgba(0, 0, 0, 0);
-  border: 3px solid rgb(255, 255, 255, 0.3);
+  border: 2px solid rgb(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 8px 10px;
   font-size: 16px;
@@ -141,8 +141,8 @@ body {
 
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
-  background: rgba(0, 0, 0, 0.4);
-  border: 3px solid skyblue;
+  background: rgba(60, 60, 60, 0.4);
+  border: 2px solid cyan;
 }
 
 #profile img:hover {
