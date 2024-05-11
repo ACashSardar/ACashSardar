@@ -1,11 +1,21 @@
 [
     {
+        "company":"Oracle",
+        "location":"Hyderabad, India",
+        "role":"Application Engineer",
+        "duration":"May 2024-Present",
+        "logo":"./images/oracle.png",
+        "client":"",
+        "type": "Full time"
+    },
+    {
         "company":"Wipro Limited",
         "location":"Hyderabad, India",
-        "role":"Java Backend Developer",
-        "duration":"Aug 2022-Present",
+        "role":"Developer L2",
+        "duration":"July 2022-April 2024",
         "logo":"./images/WiproLogo.svg",
-        "client":"Uber Technologies Inc.",
-        "type": "On-site"
+        "client":"Client: Uber Technologies Inc.",
+        "type": "Full time"
     }
+
 ]

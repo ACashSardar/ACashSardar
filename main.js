@@ -79,7 +79,7 @@ fetch("resources/experience.json")
               <span class="text-start">
                 <label class="fs-5 fw-bold custom-text-color">${exp.company}</label>
                 <p class="fs-6 text-secondary mb-0">Role: ${exp.role}</p>
-                <p class="fs-6 text-secondary mb-0">Client: ${exp.client}</p>
+                <p class="fs-6 text-secondary mb-0">${exp.client}</p>
               </span>
           </div>
           <div class="col-md-6 d-flex justify-content-center">

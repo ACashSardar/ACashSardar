@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Ubuntu;
+  --main-font-family: Calibri;
 }
 
 body {
@@ -10,6 +10,15 @@ body {
   padding: 0;
   background: var(--main-bg-color);
   font-family: var(--main-font-family);
+}
+
+h2 {
+  color: #333;
+}
+
+h2 i {
+  color: blueviolet;
+  text-shadow: 2px 2px 5px wheat;
 }
 
 .custom-bg {
@@ -25,7 +34,7 @@ body {
 
 .custom-btn {
   color: white;
-  background-color: darkcyan;
+  background-color: #333;
   border-radius: 5px;
   padding: 8px 20px;
   border: 0;
@@ -33,7 +42,7 @@ body {
 
 .custom-btn:hover {
   transition: all 0.3s ease;
-  background-color: lightseagreen;
+  background-color: black;
 }
 
 .navbar {
@@ -96,7 +105,7 @@ body {
 #introduction {
   width: 100%;
   height: 100vh;
-  background-image: url(./images/portfolio-bg2.jpg);
+  background-image: url(./images/portfolio-bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -142,7 +151,7 @@ body {
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
   background: rgba(60, 60, 60, 0.4);
-  border: 2px solid cyan;
+  border: 2px solid white;
 }
 
 #profile img:hover {
