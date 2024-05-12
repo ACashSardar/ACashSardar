@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Calibri;
+  --main-font-family: Poppins;
 }
 
 body {
@@ -73,21 +73,20 @@ h2 i {
 }
 
 .my-name {
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-size: 32px;
+  letter-spacing: 1px;
   font-weight: bold;
   color: white;
-  text-shadow: 1px 1px 20px black;
 }
 
 .my-pic {
   position: relative;
-  height: 22rem;
-  width: 27rem;
+  width: 32rem;
   border-radius: 5px;
-  background-image: url(./images/portfolio-bg6.jpg);
   background-size: cover;
   background-position: center;
+  padding: 10px;
+  background: #333;
 }
 
 .my-pic img {
@@ -110,10 +109,11 @@ h2 i {
 }
 
 .my-text {
-  background-image: url(./images/portfolio-bg4.jpg);
-  font-size: 18px;
-  padding: 22px;
+  background-image: url(./images/portfolio-bg6.jpg);
+  font-size: 16px;
+  padding: 30px;
   border-radius: 5px;
+  width: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -183,13 +183,13 @@ footer {
     font-size: 14px;
   }
   .my-name {
-    font-size: 20px;
+    font-size: 18px;
   }
   .my-pic {
     margin-top: 2rem;
     margin-bottom: 1rem;
     height: 12rem;
-    width: 11rem;
+    width: 12rem;
   }
 
   .my-btn {
