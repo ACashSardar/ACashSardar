@@ -2,7 +2,7 @@
 :root {
   --main-fg-color: black;
   --main-bg-color: white;
-  --main-font-family: Poppins;
+  --main-font-family: Ubuntu;
 }
 
 body {
@@ -42,13 +42,12 @@ h2 i {
 }
 
 .navbar {
-  background: lavender;
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid lavender;
+  background: linear-gradient(to bottom right, lightseagreen, darkcyan);
+  /* backdrop-filter: blur(15px); */
 }
 
 .nav-link {
-  color: black;
+  color: white;
   font-size: 20px;
   letter-spacing: 1px;
   margin-right: 10px;
@@ -57,11 +56,11 @@ h2 i {
 .nav-item a:hover {
   transition: all 0.2s ease;
   font-weight: bold;
-  color: #333;
+  color: wheat;
   font-size: 20px;
   text-decoration: underline 5px;
   text-underline-position: under;
-  text-underline-offset: 27px;
+  text-underline-offset: 23px;
 }
 
 #nav-btn {
@@ -86,7 +85,7 @@ h2 i {
   background-size: cover;
   background-position: center;
   padding: 10px;
-  background: #333;
+  background: linear-gradient(to bottom right, lightseagreen, darkcyan);
 }
 
 .my-pic img {
@@ -98,8 +97,8 @@ h2 i {
 #introduction {
   width: 100%;
   height: 100vh;
-  /* background-image: url(./images/portfolio-bg4.jpg); */
-  background-color: lightblue;
+  /* background-image: url(./images/portfolio-bg3.jpg); */
+  background-color: #333;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -110,6 +109,7 @@ h2 i {
 
 .my-text {
   background-image: url(./images/portfolio-bg6.jpg);
+  font-weight: 400;
   font-size: 16px;
   padding: 30px;
   border-radius: 5px;
