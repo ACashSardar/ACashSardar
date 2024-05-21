@@ -12,10 +12,10 @@ const colors = ["darkcyan", "lime", "orangered"];
 function changeNavIcon() {
   if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
     navBtn.innerHTML = '<i class="fa fa-bars"></i>';
-    navBtn.style.color = "black";
+    navBtn.style.color = "white";
   } else {
     navBtn.innerHTML = '<i class="fa fa-times"></i>';
-    navBtn.style.color = "black";
+    navBtn.style.color = "white";
   }
 }
 
