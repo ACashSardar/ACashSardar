@@ -16,11 +16,6 @@ h2 {
   color: #333;
 }
 
-h2 i {
-  color: blueviolet;
-  text-shadow: 2px 2px 5px wheat;
-}
-
 .bg-span {
   background-color: rgb(0, 20, 50);
 }
@@ -51,7 +46,6 @@ h2 i {
 
 .navbar {
   background: rgb(0, 20, 50);
-  /* backdrop-filter: blur(15px); */
 }
 
 .nav-link {
@@ -83,76 +77,74 @@ h2 i {
   font-size: 32px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: white;
+  color: #333;
 }
 
 .my-pic {
-  position: relative;
-  width: 32rem;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
-  background-position: center;
-  padding: 10px;
-  background: linear-gradient(to bottom right, rgb(0, 20, 50), rgb(0, 35, 70));
 }
 
 .my-pic img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  border: 5px solid rgb(0, 20, 50);
+  width: 48%;
+  border-radius: 50%;
 }
 
 #introduction {
   width: 100%;
   height: 100vh;
-  /* background-image: url(./images/portfolio-bg3.jpg); */
-  background-color: lavender;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-image: url(images/portfolio-bg5.jpg);
 }
 
 .my-text {
-  background-image: url(./images/portfolio-bg6.jpg);
+  color: #333;
   font-weight: 400;
-  font-size: 16px;
-  padding: 30px;
+  font-size: 20px;
+  padding: 10px;
   border-radius: 5px;
-  width: 100%;
   background-size: cover;
   background-position: center;
+  font-weight: bold;
 }
 
 .my-text a {
   font-size: 25px;
   text-decoration: none;
-  color: white;
+  color: #333;
   margin-right: 10px;
   border-radius: 20%;
 }
 
 .my-text a:hover {
-  color: cyan;
+  color: rgb(0, 20, 50, 0.7);
   transition: all 0.3s ease;
-  text-shadow: 2px 2px 10px lightseagreen;
 }
 
 .download-btn {
-  color: white;
-  background: rgba(0, 0, 0, 0);
-  border: 2px solid rgb(255, 255, 255, 0.3);
+  border: 2px solid rgb(0, 20, 50);
+  background-color: rgb(255, 255, 255, 0.1);
+  color: rgb(0, 20, 50);
+  letter-spacing: 2px;
+  font-weight: 800;
+  padding: 8px 12px;
+  font-size: 14px;
   border-radius: 5px;
-  padding: 8px 10px;
-  font-size: 16px;
 }
 
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
-  background: rgba(60, 60, 60, 0.4);
-  border: 2px solid white;
+  border: 2px solid rgb(0, 20, 50);
+  background-color: rgb(0, 20, 50);
+  color: white;
 }
 
 #profile img:hover {
@@ -187,16 +179,14 @@ footer {
   }
 
   #introduction .my-text {
-    font-size: 14px;
+    font-size: 16px;
   }
   .my-name {
     font-size: 18px;
   }
   .my-pic {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    height: 12rem;
-    width: 12rem;
   }
 
   .my-btn {
