@@ -42,22 +42,22 @@ fetch("resources/education.json")
     data.forEach((edu, index) => {
       educationItems.innerHTML += `
         <div class="row m-0 mb-3">
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
               <span class="me-3">
-                <img src=${edu.logo}  style="height: 5rem; width: 5rem;">
+                <img src=${edu.logo}  class="custom-brand-logo">
               </span>
               <span class="text-start">
-                <label class="fs-5 fw-bold custom-text-color">${edu.institutionName}</label>
-                <p class="fs-6 text-secondary mb-0">${edu.degree}</p>
-                <p class="fs-6 text-secondary mb-0">${edu.branch}</p>
+                <label class="custom-text-lg fw-bold custom-text-color">${edu.institutionName}</label>
+                <p class="custom-text-sm text-secondary mb-0">${edu.degree}</p>
+                <p class="custom-text-sm text-secondary mb-0">Branch: ${edu.branch}</p>
               </span>
           </div>
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
-                <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${edu.location}</label>
-                <p class="fs-6 text-secondary mb-0">${edu.duration}</p>
-                <p class="fs-6 text-secondary mb-0">${edu.score}</p>
+                <label class="custom-text-sm fw-bold">${edu.location}</label>
+                <p class="custom-text-sm text-secondary mb-0">${edu.duration}</p>
+                <p class="custom-text-sm text-secondary mb-0">${edu.score}</p>
               </span>
             </div>
           </div>
@@ -72,22 +72,22 @@ fetch("resources/experience.json")
     data.forEach((exp, index) => {
       experienceItems.innerHTML += `
         <div class="row m-0 mb-3">
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
               <span class="me-3">
-                <img src=${exp.logo}  style="height: 5rem; width: 5rem;">
+                <img src=${exp.logo}  class="custom-brand-logo">
               </span>
               <span class="text-start">
-                <label class="fs-5 fw-bold custom-text-color">${exp.company}</label>
-                <p class="fs-6 text-secondary mb-0">Role: ${exp.role}</p>
-                <p class="fs-6 text-secondary mb-0">${exp.client}</p>
+                <label class="custom-text-lg fw-bold custom-text-color">${exp.company}</label>
+                <p class="custom-text-sm text-secondary mb-0">${exp.designation}</p>
+                <p class="custom-text-sm text-secondary mb-0">Role: ${exp.role}</p>
               </span>
           </div>
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
-                <label class="fs-6 fw-bold pt-2"><i class="fa fa-map-marker"></i> ${exp.location}</label>
-                <p class="fs-6 text-secondary mb-0">${exp.duration}</p>
-                <p class="fs-6 text-secondary mb-0">Type: ${exp.type}</p>
+                <label class="custom-text-sm fw-bold">${exp.location}</label>
+                <p class="custom-text-sm text-secondary mb-0">${exp.duration}</p>
+                <p class="custom-text-sm text-secondary mb-0">Type: ${exp.type}</p>
               </span>
             </div>
           </div>
@@ -117,7 +117,7 @@ fetch("resources/projects.json")
           <div class="card border-0 rounded-2 mb-5">
             <img class="rounded-2" src="${project.logo}" style="height: 14rem">
             <div class="card-body text-left">
-              <h4 class="fw-bold">${project.name}</h4>
+              <p class="fs-4 fw-bold">${project.name}</p>
               <span class="badge text-dark rounded-0 fs-6 fw-light p-3">
                 <b class="me-2">Github Link(s): </b>
                 ${project.githubLink
@@ -167,43 +167,3 @@ fetch("resources/profile.json")
       `;
     });
   });
-
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const name = e.target.name.value;
-  const email = e.target.email.value;
-  const subject = e.target.subject.value;
-  const body = e.target.body.value;
-
-  sendEmail(name, email, subject, body, () => {
-    e.target.name.value = "";
-    e.target.email.value = "";
-    e.target.subject.value = "";
-    e.target.body.value = "";
-    errorMsg.innerHTML = "";
-  });
-}
-
-function sendEmail(name, email, subject, body, callback) {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "akashs13122000@gmail.com",
-    Password: "18C2EE26A1BA83A5FB88018E92EDDD3384D3",
-    To: "akashs13122000@gmail.com",
-    From: email,
-    Subject: subject,
-    Body: body,
-  }).then((message) => {
-    console.log(message);
-    if (message === "OK") {
-      alert("Mail Sent to Akash Sardar");
-      callback();
-    } else {
-      errorMsg.innerHTML = "Please check your Email ID";
-    }
-  });
-}
-
-function resetForm() {
-  document.getElementById("contact-form").reset();
-}
