@@ -28,19 +28,6 @@ h2 {
   border-radius: 0;
 }
 
-.custom-btn {
-  color: white;
-  background-color: #333;
-  border-radius: 5px;
-  padding: 8px 20px;
-  border: 0;
-}
-
-.custom-btn:hover {
-  transition: all 0.3s ease;
-  background-color: black;
-}
-
 .navbar {
   background: var(--main-bg-color);
   box-shadow: 1px 1px 10px grey;
@@ -48,7 +35,7 @@ h2 {
 
 .nav-link {
   color: var(--main-fg-color);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
   margin-right: 10px;
@@ -58,7 +45,7 @@ h2 {
   transition: all 0.2s ease;
   font-weight: bold;
   color: var(--main-fg-hover);
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 23px;
@@ -90,6 +77,7 @@ h2 {
   border: 2px solid rgb(128, 128, 128, 0.5);
   width: 70%;
   border-radius: 50%;
+  background-color: lavender;
 }
 
 #introduction {
@@ -133,9 +121,30 @@ h2 {
 .custom-text-lg {
   font-size: 18px;
 }
+.custom-text-xl {
+  font-size: 25px;
+}
 .custom-brand-logo {
   height: 4rem;
   width: 4rem;
+}
+.custom-brand-name {
+  font-weight: bold;
+  font-family: var(--main-font-family);
+  letter-spacing: 2px;
+}
+.custom-btn {
+  color: white;
+  background-color: var(--main-fg-color);
+  border-radius: 5px;
+  padding: 6px 18px;
+  font-size: 14px;
+  border: 1px solid var(--main-fg-color);
+}
+.custom-btn:hover {
+  transition: all 0.5s ease;
+  background: white;
+  color: var(--main-fg-color);
 }
 
 .download-btn {
@@ -230,10 +239,13 @@ footer {
   }
 
   .custom-text-sm {
-    font-size: 10px;
+    font-size: 9px;
   }
   .custom-text-lg {
-    font-size: 12px;
+    font-size: 15px;
+  }
+  .custom-text-xl {
+    font-size: 20px;
   }
   .custom-brand-logo {
     height: 3.5rem;

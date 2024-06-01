@@ -24,6 +24,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar fixed-top p-3" id="navbar">
       <div class="container-fluid">
+        <a class="navbar-brand custom-brand-name" href="#">Akash Sardar</a>
         <button
           class="navbar-toggler p-0 shadow-none text-white"
           type="button"
@@ -34,27 +35,24 @@
           aria-label="Toggle navigation"
           onclick="return changeNavIcon()"
         >
-          <span id="nav-btn"><i class="fa fa-bars text-white"></i></span>
+          <span id="nav-btn"><i class="fa fa-bars text-dark"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#pre-education">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
+              <a class="nav-link" href="#education">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#experience">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">Profiles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#profile">Profiles</a>
+              <a class="nav-link" href="#profiles">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -67,8 +65,8 @@
     <div class="container-fluid p-0">
       <div id="introduction" class="mb-5">
         <div class="row mx-0 my-desc mt-5">
-          <div class="col-md-6 d-flex justify-content-center p-1 my-pic">
-            <img src="images/akash_sardar1.png" alt="" />
+          <div class="col-md-6 d-flex justify-content-center my-pic p-1">
+            <img id="my-img" src="images/akash_sardar1.png" alt="" />
           </div>
           <div class="col-md-6 d-flex justify-content-start p-1">
             <div class="my-text">
@@ -86,8 +84,8 @@
                 Application engineer at ORACLE.
               </p>
               <p>
-                <i class="fa fa-code fs-5 me-1"></i>Web developer & Competitive
-                programmer.
+                <i class="fa fa-code fs-5 me-1"></i>Specialist @Codeforces, 4⭐
+                @Codechef
               </p>
               <p>
                 <i class="fa fa-graduation-cap fs-5"></i>Jadavpur University
@@ -116,9 +114,6 @@
                   <i class="fa fa-instagram"></i>
                 </a>
               </span>
-              <!-- <button class="download-btn" onclick="download(this)">
-                Download Resume <i class="fa fa-download"></i>
-              </button> -->
               <a
                 href="https://docs.google.com/document/d/1aqO6c-5BeGxQnAbm8WSOnhR-Fh1mUhLQYX3OUjmpb-E"
                 target="_blank"
@@ -128,20 +123,26 @@
             </div>
           </div>
         </div>
+        <div id="pre-education"></div>
       </div>
 
       <div id="education" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-graduation-cap"></i> EDUCATION
         </span>
         <hr />
         <div class="custom-margin">
           <div id="education-items"></div>
         </div>
+        <div id="pre-experience"></div>
       </div>
 
       <div id="experience" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-history"></i> EXPERIENCE
         </span>
         <hr />
@@ -151,7 +152,9 @@
       </div>
 
       <div id="skills" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-gears"></i> SKILLS
         </span>
         <hr />
@@ -161,7 +164,9 @@
       </div>
 
       <div id="profiles" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-code"></i> MY PROFILES
         </span>
         <hr />
@@ -171,7 +176,9 @@
       </div>
 
       <div id="projects" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-laptop"></i> PROJECTS
         </span>
         <hr />
@@ -181,7 +188,9 @@
       </div>
 
       <div id="contact" class="text-center align-center my-5">
-        <span class="bg-span py-2 px-3 rounded-2 fg-span custom-text-lg">
+        <span
+          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
+        >
           <i class="fa fa-envelope-o"></i> CONTACT
         </span>
         <hr />
@@ -207,7 +216,7 @@
       </div>
     </div>
 
-    <footer class="mt-5">
+    <footer class="mt-5 custom-text-lg">
       <p>Copywright &copy; Akash Sardar, 2022</p>
     </footer>
 

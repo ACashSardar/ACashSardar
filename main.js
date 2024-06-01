@@ -6,16 +6,17 @@ const experienceItems = document.getElementById("experience-items");
 const educationItems = document.getElementById("education-items");
 const errorMsg = document.getElementById("error-msg");
 const navBtn = document.getElementById("nav-btn");
+const myImg = document.getElementById("my-img");
 
 const colors = ["darkcyan", "lime", "orangered"];
 
 function changeNavIcon() {
   if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
     navBtn.innerHTML = '<i class="fa fa-bars"></i>';
-    navBtn.style.color = "white";
+    navBtn.style.color = "black";
   } else {
     navBtn.innerHTML = '<i class="fa fa-times"></i>';
-    navBtn.style.color = "white";
+    navBtn.style.color = "black";
   }
 }
 
@@ -114,12 +115,14 @@ fetch("resources/projects.json")
     data.forEach((project, index) => {
       projectItems.innerHTML += `
         <div class="col-md-4">
-          <div class="card border-0 rounded-2 mb-5">
-            <img class="rounded-2" src="${project.logo}" style="height: 14rem">
+          <div class="card rounded-2 border bg-light mb-5">
+            <img class="rounded-top" src="${
+              project.logo
+            }" style="height: 14rem">
             <div class="card-body text-left">
-              <p class="fs-4 fw-bold">${project.name}</p>
-              <span class="badge text-dark rounded-0 fs-6 fw-light p-3">
-                <b class="me-2">Github Link(s): </b>
+              <p class="custom-text-xl fw-bold">${project.name}</p>
+              <span class="badge text-dark rounded-0 custom-text-lg fw-light mb-3">
+                <label class="me-2">Github Link(s): </label>
                 ${project.githubLink
                   .map(
                     (e, index) =>
@@ -167,3 +170,34 @@ fetch("resources/profile.json")
       `;
     });
   });
+
+function animateMyPic() {
+  let i = 30;
+  let flag = true;
+  let turn = 0;
+  setInterval(() => {
+    if (turn == 0) {
+      myImg.style.borderTopLeftRadius = `${i}%`;
+      myImg.style.borderBottomRightRadius = `${i}%`;
+    } else {
+      myImg.style.borderBottomLeftRadius = `${i}%`;
+      myImg.style.borderTopRightRadius = `${i}%`;
+    }
+    myImg.style.background = `rgb(${(i * 0) % 255} , ${(i * 2) % 255}, ${
+      (i * 3) % 255
+    })`;
+
+    if (flag) {
+      if (i == 50) {
+        flag = !flag;
+        turn = (turn + 1) % 2;
+      } else i++;
+    } else {
+      if (i == 30) {
+        flag = !flag;
+      } else i--;
+    }
+  }, 30);
+}
+
+animateMyPic();
