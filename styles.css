@@ -3,7 +3,7 @@
   --main-fg-color: rgb(0, 20, 50);
   --main-fg-hover: rgb(0, 20, 50, 0.7);
   --main-bg-color: white;
-  --main-font-family: Merriweather;
+  --main-font-family: Cambria;
 }
 
 body {
@@ -116,13 +116,13 @@ h2 {
   transition: all 0.3s ease;
 }
 .custom-text-sm {
-  font-size: 14px;
+  font-size: 16px;
 }
 .custom-text-lg {
   font-size: 18px;
 }
 .custom-text-xl {
-  font-size: 25px;
+  font-size: 24px;
 }
 .custom-brand-logo {
   height: 4rem;
@@ -149,9 +149,9 @@ h2 {
 
 .download-btn {
   border: 2px solid var(--main-fg-color);
-  background-color: rgb(255, 255, 255, 0.1);
-  color: var(--main-fg-color);
-  letter-spacing: 2px;
+  background-color: var(--main-fg-color);
+  color: white;
+  letter-spacing: 1px;
   font-weight: 800;
   padding: 8px 12px;
   font-size: 14px;
@@ -160,9 +160,8 @@ h2 {
 
 .download-btn:hover {
   transition: all 0.5s ease-in-out;
-  border: 2px solid var(--main-fg-color);
-  background-color: var(--main-fg-color);
-  color: white;
+  background-color: rgb(255, 255, 255, 0.1);
+  color: var(--main-fg-color);
 }
 
 #profile img:hover {
@@ -200,10 +199,10 @@ footer {
     font-size: 16px;
   }
   .my-name {
-    font-size: 18px;
+    font-size: 16px;
   }
   .my-pic {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -242,7 +241,7 @@ footer {
     font-size: 9px;
   }
   .custom-text-lg {
-    font-size: 15px;
+    font-size: 14px;
   }
   .custom-text-xl {
     font-size: 20px;
