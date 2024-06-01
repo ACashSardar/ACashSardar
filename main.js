@@ -183,8 +183,8 @@ function animateMyPic() {
       myImg.style.borderBottomLeftRadius = `${i}%`;
       myImg.style.borderTopRightRadius = `${i}%`;
     }
-    myImg.style.background = `rgb(${(i * 0) % 255} , ${(i * 2) % 255}, ${
-      (i * 3) % 255
+    myImg.style.background = `rgb(${(i * 1) % 255} , ${(i * 1) % 255}, ${
+      (i * 2) % 255
     })`;
 
     if (flag) {
