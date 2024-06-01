@@ -118,7 +118,7 @@ fetch("resources/projects.json")
           <div class="card rounded-2 border bg-light mb-5">
             <img class="rounded-top" src="${
               project.logo
-            }" style="height: 14rem">
+            }" style="height: 12rem">
             <div class="card-body text-left">
               <p class="custom-text-xl fw-bold">${project.name}</p>
               <span class="badge text-dark rounded-0 custom-text-lg fw-light mb-3">
