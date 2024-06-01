@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
-  --main-fg-color: rgb(0, 20, 50);
-  --main-fg-hover: rgb(0, 20, 50, 0.7);
+  --main-fg-color: rgb(0, 60, 100);
+  --main-fg-hover: rgb(0, 120, 200, 0.7);
   --main-bg-color: white;
   --main-font-family: Cambria;
 }
@@ -96,11 +96,13 @@ h2 {
   color: var(--main-fg-color);
   font-weight: 400;
   font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
   font-weight: bold;
+  box-shadow: 1px 1px 5px grey;
+  background-color: rgb(255, 255, 255, 0.1);
 }
 
 .my-text a {
@@ -117,9 +119,11 @@ h2 {
 }
 .custom-text-sm {
   font-size: 16px;
+  color: var(--main-fg-color);
 }
 .custom-text-lg {
   font-size: 18px;
+  color: var(--main-fg-color);
 }
 .custom-text-xl {
   font-size: 24px;
@@ -204,6 +208,9 @@ footer {
   .my-pic {
     margin-top: 2rem;
     margin-bottom: 1rem;
+  }
+  .my-text {
+    padding: 10px;
   }
 
   .my-btn {
