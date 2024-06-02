@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: rgb(60, 60, 60);
-  --main-fg-hover: rgb(60, 60, 60, 0.7);
+  --main-fg-hover: rgb(60, 60, 60, 0.5);
   --main-bg-color: white;
   --main-font-family: Cambria;
 }
@@ -9,8 +9,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--main-bg-color);
   font-family: var(--main-font-family);
+  background-image: url(images/portfolio-bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h2 {
@@ -30,22 +33,19 @@ h2 {
 
 .navbar {
   background: var(--main-bg-color);
-  box-shadow: 1px 1px 10px grey;
+  border: 1px solid lavender;
 }
 
 .nav-link {
   color: var(--main-fg-color);
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
   letter-spacing: 1px;
   margin-right: 10px;
 }
 
 .nav-item a:hover {
   transition: all 0.2s ease;
-  font-weight: bold;
   color: var(--main-fg-hover);
-  font-size: 16px;
   text-decoration: underline 5px;
   text-underline-position: under;
   text-underline-offset: 23px;
@@ -57,13 +57,6 @@ h2 {
 
 #nav-btn i {
   border: 0px;
-}
-
-.my-name {
-  font-size: 32px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: var(--main-fg-color);
 }
 
 .my-pic {
@@ -89,18 +82,18 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-image: url(images/portfolio-bg1.jpg);
+  /* background-image: url(images/portfolio-bg1.jpg); */
 }
 
 .my-text {
   color: var(--main-fg-color);
   font-weight: 400;
   font-size: 18px;
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255, 0.2);
 }
 
 .my-text a {
@@ -136,34 +129,22 @@ h2 {
   letter-spacing: 2px;
 }
 .custom-btn {
-  color: white;
-  background-color: var(--main-fg-color);
-  border-radius: 5px;
-  padding: 6px 18px;
-  font-size: 14px;
-  border: 1px solid var(--main-fg-color);
-}
-.custom-btn:hover {
-  transition: all 0.5s ease;
-  background: white;
-  color: var(--main-fg-color);
-}
-
-.download-btn {
   border: 2px solid var(--main-fg-color);
   background-color: var(--main-fg-color);
   color: white;
   letter-spacing: 1px;
-  font-weight: 800;
+  font-weight: 200;
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 5px;
 }
-
-.download-btn:hover {
+.custom-btn:hover {
   transition: all 0.5s ease-in-out;
   background-color: rgb(255, 255, 255, 0.1);
   color: var(--main-fg-color);
+}
+.custom-bg-transparent {
+  background-color: rgb(255, 255, 255, 0.2);
 }
 
 #profile img:hover {
@@ -173,7 +154,6 @@ h2 {
 
 footer {
   height: 10vh;
-  background-color: var(--main-bg-color);
   padding-top: 15px;
   font-size: 1rem;
   display: flex;
@@ -200,9 +180,7 @@ footer {
   #introduction .my-text {
     font-size: 16px;
   }
-  .my-name {
-    font-size: 16px;
-  }
+
   .my-pic {
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -228,9 +206,6 @@ footer {
 
   .education {
     width: 90%;
-  }
-  .download-btn {
-    font-size: 14px;
   }
 
   .tech-logo {

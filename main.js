@@ -115,13 +115,13 @@ fetch("resources/projects.json")
     data.forEach((project, index) => {
       projectItems.innerHTML += `
         <div class="col-md-4">
-          <div class="card rounded-2 border bg-light mb-5">
-            <img class="rounded-top" src="${
+          <div class="card rounded-2 border custom-bg-transparent mb-3">
+            <img class="rounded-top border" src="${
               project.logo
-            }" style="height: 12rem">
+            }" style="height: 11rem">
             <div class="card-body text-left">
-              <p class="custom-text-xl fw-bold">${project.name}</p>
-              <span class="badge text-dark rounded-0 custom-text-lg fw-light mb-3">
+              <p class="custom-text-xl mb-1">${project.name}</p>
+              <span class="badge text-dark rounded-0 custom-text-lg fw-light mb-2">
                 <label class="me-2">Github Link(s): </label>
                 ${project.githubLink
                   .map(
@@ -183,7 +183,7 @@ function animateMyPic() {
       myImg.style.borderBottomLeftRadius = `${i}%`;
       myImg.style.borderTopRightRadius = `${i}%`;
     }
-    myImg.style.background = `rgb(${(i * 1) % 255} , ${(i * 1) % 255}, ${
+    myImg.style.background = `rgb(${(i * 2) % 255} , ${(i * 2) % 255}, ${
       (i * 2) % 255
     })`;
 
