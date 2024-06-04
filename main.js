@@ -49,16 +49,16 @@ fetch("resources/education.json")
               </span>
               <span class="text-start">
                 <label class="custom-text-lg fw-bold custom-text-color">${edu.institutionName}</label>
-                <p class="custom-text-sm text-secondary mb-0">${edu.degree}</p>
-                <p class="custom-text-sm text-secondary mb-0">Branch: ${edu.branch}</p>
+                <p class="custom-text-sm mb-0">${edu.degree}</p>
+                <p class="custom-text-sm mb-0">Branch: ${edu.branch}</p>
               </span>
           </div>
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
                 <label class="custom-text-sm fw-bold">${edu.location}</label>
-                <p class="custom-text-sm text-secondary mb-0">${edu.duration}</p>
-                <p class="custom-text-sm text-secondary mb-0">${edu.score}</p>
+                <p class="custom-text-sm mb-0">${edu.duration}</p>
+                <p class="custom-text-sm mb-0">${edu.score}</p>
               </span>
             </div>
           </div>
@@ -79,16 +79,16 @@ fetch("resources/experience.json")
               </span>
               <span class="text-start">
                 <label class="custom-text-lg fw-bold custom-text-color">${exp.company}</label>
-                <p class="custom-text-sm text-secondary mb-0">${exp.designation}</p>
-                <p class="custom-text-sm text-secondary mb-0">Role: ${exp.role}</p>
+                <p class="custom-text-sm mb-0">${exp.designation}</p>
+                <p class="custom-text-sm mb-0">Role: ${exp.role}</p>
               </span>
           </div>
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start">
                 <label class="custom-text-sm fw-bold">${exp.location}</label>
-                <p class="custom-text-sm text-secondary mb-0">${exp.duration}</p>
-                <p class="custom-text-sm text-secondary mb-0">Type: ${exp.type}</p>
+                <p class="custom-text-sm mb-0">${exp.duration}</p>
+                <p class="custom-text-sm mb-0">Type: ${exp.type}</p>
               </span>
             </div>
           </div>
