@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
-  --main-fg-color: rgb(60, 60, 60);
-  --main-fg-hover: rgb(60, 60, 60, 0.5);
-  --main-bg-color: white;
+  --main-fg-color: white;
+  --main-fg-hover: rgba(0, 141, 206);
+  --main-bg-color: rgb(10, 40, 50);
+  --main-navbar-color: rgba(2, 11, 36, 0.95);
   --main-font-family: Cambria;
 }
 
@@ -10,14 +11,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--main-font-family);
-  background-image: url(images/portfolio-bg1.jpg);
+  /* background-color: var(--main-bg-color); */
+  background-image: url(images/portfolio-bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-h2 {
-  color: #333;
 }
 
 .fg-span {
@@ -32,8 +30,8 @@ h2 {
 }
 
 .navbar {
-  background: var(--main-bg-color);
-  border: 1px solid lavender;
+  background: var(--main-navbar-color);
+  /* border: 1px solid lavender; */
 }
 
 .nav-link {
@@ -68,9 +66,11 @@ h2 {
 
 .my-pic img {
   border: 2px solid rgb(128, 128, 128, 0.5);
-  width: 70%;
+  width: 75%;
   border-radius: 50%;
-  background-color: lavender;
+  /* background-color: lavender; */
+  /* background-image: url(images/portfolio-bg_gif.gif); */
+  background-size: cover;
 }
 
 #introduction {
@@ -88,11 +88,10 @@ h2 {
   color: var(--main-fg-color);
   font-weight: 400;
   font-size: 18px;
-  padding: 20px 30px;
+  padding: 20px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  background-color: rgb(255, 255, 255, 0.2);
 }
 
 .my-text a {
@@ -119,8 +118,12 @@ h2 {
   font-size: 24px;
 }
 .custom-brand-logo {
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 5px cyan;
 }
 .custom-brand-name {
   font-weight: bold;
@@ -130,7 +133,7 @@ h2 {
 .custom-btn {
   border: 2px solid var(--main-fg-color);
   background-color: var(--main-fg-color);
-  color: white;
+  color: var(--main-bg-color);
   letter-spacing: 1px;
   font-weight: 200;
   padding: 8px 12px;
@@ -144,6 +147,7 @@ h2 {
 }
 .custom-bg-transparent {
   background-color: rgb(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 5px cyan;
 }
 
 #profile img:hover {
@@ -162,12 +166,29 @@ footer {
 
 .tech-logo {
   height: 5rem;
-  margin: 5px;
+  width: 5rem;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 5px cyan;
 }
 
 .profile-logo {
-  height: 6rem;
+  height: 5rem;
+  width: 5rem;
   margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 5px cyan;
+}
+
+.career-info {
+  /* padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 5px gray; */
 }
 
 @media screen and (max-width: 1000px) {
@@ -208,11 +229,13 @@ footer {
   }
 
   .tech-logo {
-    height: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     margin: 10px 1px;
   }
   .profile-logo {
     height: 2.5rem;
+    width: 2.5rem;
     margin: 2px;
   }
 

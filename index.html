@@ -25,7 +25,6 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar fixed-top p-3" id="navbar">
       <div class="container-fluid">
-        <img src="images/akash_name.png" style="width: 100px" alt="" />
         <button
           class="navbar-toggler p-0 shadow-none text-white"
           type="button"
@@ -36,8 +35,9 @@
           aria-label="Toggle navigation"
           onclick="return changeNavIcon()"
         >
-          <span id="nav-btn"><i class="fa fa-bars text-dark"></i></span>
+          <span id="nav-btn"><i class="fa fa-bars text-light"></i></span>
         </button>
+        <img src="images/akash_name.png" style="width: 100px" alt="" />
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -72,10 +72,10 @@
           <div class="col-md-6 d-flex justify-content-start p-1">
             <div class="my-text">
               <p class="fs-5">Hi, there👋</p>
-              <h2 class="custom-font-xl mb-3">
+              <h3 class="custom-font-xl fw-bold mb-3">
                 I am
                 <label id="auto-type"> </label>
-              </h2>
+              </h3>
               <p>
                 <i class="fa fa-home fs-4 mx-1"></i>From Kolkata, currently in
                 Hyderabad.
@@ -115,13 +115,13 @@
                 <a href="https://www.instagram.com/lazer.kitty" target="_blank">
                   <i class="fa fa-instagram"></i>
                 </a>
+                <a
+                  href="https://docs.google.com/document/d/1aqO6c-5BeGxQnAbm8WSOnhR-Fh1mUhLQYX3OUjmpb-E"
+                  target="_blank"
+                >
+                  <button class="custom-btn">View Resume</button>
+                </a>
               </span>
-              <a
-                href="https://docs.google.com/document/d/1aqO6c-5BeGxQnAbm8WSOnhR-Fh1mUhLQYX3OUjmpb-E"
-                target="_blank"
-              >
-                <button class="custom-btn">My Resume</button>
-              </a>
             </div>
           </div>
         </div>
@@ -201,6 +201,7 @@
             <div class="col-md-4 custom-text-lg fw-bold">
               <i class="fa fa-linkedin"></i>
               <a
+                class="link-light"
                 href="https://www.linkedin.com/in/akash-sardar-118858184/"
                 target="_blank"
                 >LinkedIn</a

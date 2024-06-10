@@ -13,10 +13,10 @@ const colors = ["darkcyan", "lime", "orangered"];
 function changeNavIcon() {
   if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
     navBtn.innerHTML = '<i class="fa fa-bars"></i>';
-    navBtn.style.color = "black";
+    navBtn.style.color = "white";
   } else {
     navBtn.innerHTML = '<i class="fa fa-times"></i>';
-    navBtn.style.color = "black";
+    navBtn.style.color = "white";
   }
 }
 
@@ -47,7 +47,7 @@ fetch("resources/education.json")
               <span class="me-3">
                 <img src=${edu.logo}  class="custom-brand-logo">
               </span>
-              <span class="text-start">
+              <span class="text-start career-info">
                 <label class="custom-text-lg fw-bold custom-text-color">${edu.institutionName}</label>
                 <p class="custom-text-sm mb-0">${edu.degree}</p>
                 <p class="custom-text-sm mb-0">Branch: ${edu.branch}</p>
@@ -55,7 +55,7 @@ fetch("resources/education.json")
           </div>
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
-              <span class="text-start">
+              <span class="text-start career-info">
                 <label class="custom-text-sm fw-bold">${edu.location}</label>
                 <p class="custom-text-sm mb-0">${edu.duration}</p>
                 <p class="custom-text-sm mb-0">${edu.score}</p>
@@ -77,7 +77,7 @@ fetch("resources/experience.json")
               <span class="me-3">
                 <img src=${exp.logo}  class="custom-brand-logo">
               </span>
-              <span class="text-start">
+              <span class="text-start career-info">
                 <label class="custom-text-lg fw-bold custom-text-color">${exp.company}</label>
                 <p class="custom-text-sm mb-0">${exp.designation}</p>
                 <p class="custom-text-sm mb-0">Role: ${exp.role}</p>
@@ -85,7 +85,7 @@ fetch("resources/experience.json")
           </div>
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
-              <span class="text-start">
+              <span class="text-start career-info">
                 <label class="custom-text-sm fw-bold">${exp.location}</label>
                 <p class="custom-text-sm mb-0">${exp.duration}</p>
                 <p class="custom-text-sm mb-0">Type: ${exp.type}</p>
@@ -115,20 +115,20 @@ fetch("resources/projects.json")
     data.forEach((project, index) => {
       projectItems.innerHTML += `
         <div class="col-md-4">
-          <div class="card rounded-2 border custom-bg-transparent mb-3">
-            <img class="rounded-top border" src="${
+          <div class="card text-light rounded-2 custom-bg-transparent p-1 mb-3">
+            <img class="rounded-top" src="${
               project.logo
             }" style="height: 11rem">
             <div class="card-body text-left">
               <p class="custom-text-xl mb-1">${project.name}</p>
-              <span class="badge text-dark rounded-0 custom-text-lg fw-light mb-2">
+              <span class="badge rounded-0 custom-text-lg fw-light mb-2">
                 <label class="me-2">Github Link(s): </label>
                 ${project.githubLink
                   .map(
                     (e, index) =>
                       `<a href=${
                         e.link
-                      } target="_blank" class="fw-bold me-2">Link${
+                      } target="_blank" class="fw-bold link-light me-2">Link${
                         index + 1
                       }</a>`
                   )
@@ -183,8 +183,8 @@ function animateMyPic() {
       myImg.style.borderBottomLeftRadius = `${i}%`;
       myImg.style.borderTopRightRadius = `${i}%`;
     }
-    myImg.style.background = `rgb(${(i * 2) % 255} , ${(i * 2) % 255}, ${
-      (i * 2) % 255
+    myImg.style.background = `rgb(${(i * 4) % 255} , ${(i * 4) % 255}, ${
+      (i * 4) % 255
     })`;
 
     if (flag) {
