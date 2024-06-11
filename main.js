@@ -56,7 +56,7 @@ fetch("resources/education.json")
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start career-info">
-                <label class="custom-text-sm fw-bold">${edu.location}</label>
+                <label class="custom-text-lg fw-bold">${edu.location}</label>
                 <p class="custom-text-sm mb-0">${edu.duration}</p>
                 <p class="custom-text-sm mb-0">${edu.score}</p>
               </span>
@@ -86,7 +86,7 @@ fetch("resources/experience.json")
           <div class="col-6 d-flex justify-content-center">
             <div class="d-flex">
               <span class="text-start career-info">
-                <label class="custom-text-sm fw-bold">${exp.location}</label>
+                <label class="custom-text-lg fw-bold">${exp.location}</label>
                 <p class="custom-text-sm mb-0">${exp.duration}</p>
                 <p class="custom-text-sm mb-0">Type: ${exp.type}</p>
               </span>
@@ -183,9 +183,9 @@ function animateMyPic() {
       myImg.style.borderBottomLeftRadius = `${i}%`;
       myImg.style.borderTopRightRadius = `${i}%`;
     }
-    myImg.style.background = `rgb(${(i * 4) % 255} , ${(i * 4) % 255}, ${
-      (i * 4) % 255
-    })`;
+    // myImg.style.background = `rgb(${(i * 1) % 255} , ${(i * 1) % 255}, ${
+    //   (i * 1) % 255
+    // }, ${i})`;
 
     if (flag) {
       if (i == 50) {
