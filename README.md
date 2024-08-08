@@ -5,19 +5,19 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=acashsardar" alt="acashsardar" /></a> </p>
 
-- 🔭 I’m currently working on **Uber Technologies Inc. project**
+- 🔭 I’m currently working as a **Software Engineer** at **Oracle**
 
-- 🌱 I’m currently learning **Unit Testing with Junit and Mockito**
+- 🌱 I’m currently learning **CP algorithms to become Expert on CodeForces and 5* on CodeChef**
 
 - 👨‍💻 All of my projects are available at [https://acashsardar.github.io/ACashSardar/](https://acashsardar.github.io/ACashSardar/)
 
-- 💬 Ask me about **DSA, Java, Spring Boot, REST API**
+- 💬 Ask me about **DSA, CP, Java, JavaScript, Spring Boot, REST API**
 
 - 📫 How to reach me **akashsardar383@gmail.com**
 
 - 📄 Know about my experiences [https://docs.google.com/document/d/169FM_kU6VVg12VR6AXWVm1EUvd0AtqFUFyR5BRl4V2c/edit](https://docs.google.com/document/d/169FM_kU6VVg12VR6AXWVm1EUvd0AtqFUFyR5BRl4V2c/edit)
 
-- ⚡ Fun fact **My life is boring 😔**
+- ⚡ Fun fact **Shuru majboori mein kiye the.. Ab maza aa raha hai**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
