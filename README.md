@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Akash Sardar</h1>
-<h3 align="center">A passionate Software Engineer from India. I work as a Backend web-developer @Wipro Limited.</h3>
+<h1 align="center">Hello👋, I'm Akash Sardar</h1>
+<h3 align="center">A passionate Software Engineer from India with 2 years of experience.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=acashsardar&label=Profile%20views&color=0eb421&style=flat" alt="acashsardar" /> </p>
 
@@ -7,7 +7,7 @@
 
 - 🔭 I’m currently working as a **Software Engineer** at **Oracle**
 
-- 🌱 I’m currently learning **CP algorithms to become Expert on CodeForces and 5* on CodeChef**
+- 🌱 I’m currently grinding **Leetcode, CodeForces and CodeChef**
 
 - 👨‍💻 All of my projects are available at [https://acashsardar.github.io/ACashSardar/](https://acashsardar.github.io/ACashSardar/)
 
