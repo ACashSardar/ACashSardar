@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anonymous+Pro&family=Caveat:wght@500&family=Comfortaa:wght@500&family=Dancing+Script&family=Fascinate&family=Fuzzy+Bubbles&family=Kanit:wght@200&family=Klee+One&family=Labrada:wght@300&family=Lato:wght@400&family=Lobster&family=Merriweather:wght@300&family=Nunito:wght@300&family=Pacifico&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Satisfy&family=Titillium+Web:wght@300&family=Ubuntu&display=swap");
 :root {
   --main-fg-color: white;
-  --main-fg-hover: rgba(0, 141, 206);
+  --main-fg-hover: greenyellow;
   --main-bg-color: rgb(10, 40, 50);
   --main-navbar-color: rgba(2, 11, 36, 0.95);
-  --main--box-shadow: rgb(0, 180, 255);
-  --main-font-family: Cambria;
+  --main--box-shadow: greenyellow;
+  --main-font-family: Merriweather;
 }
 
 body {
@@ -31,10 +31,10 @@ body {
 }
 
 .navbar {
-  background-image: url(images/portfolio-bg3.jpg);
+  background: #333;
   background-position: center;
   background-size: cover;
-  box-shadow: 1px 1px 5px rgb(0, 180, 255);
+  /* box-shadow: 1px 1px 5px var(--main--box-shadow); */
 }
 
 .nav-link {
@@ -68,10 +68,8 @@ body {
 }
 
 .my-pic img {
-  width: 75%;
+  width: 50%;
   border-radius: 50%;
-  /* background-color: lavender; */
-  /* background-image: url(images/portfolio-bg_gif.gif); */
   background-size: cover;
   box-shadow: 1px 1px 10px var(--main--box-shadow);
 }
@@ -191,6 +189,10 @@ footer {
 
 .about-info {
   width: 70%;
+}
+
+#auto-type {
+  color: var(--main--box-shadow);
 }
 
 @media screen and (max-width: 1000px) {
