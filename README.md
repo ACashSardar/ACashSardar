@@ -1,23 +1,23 @@
 <h1 align="center">Hi 👋, I'm Akash Sardar</h1>
-<h3 align="center">A passionate Software Engineer from India. I work as a Backend web-developer @Wipro Limited.</h3>
+<h3 align="center">A software engineer by profession and a competitive coder by passion, currently working as an Application Engineer at Oracle.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=acashsardar&label=Profile%20views&color=0eb421&style=flat" alt="acashsardar" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=acashsardar" alt="acashsardar" /></a> </p>
 
-- 🔭 I’m currently working on **Uber Technologies Inc. project**
+- 🔭 I’m currently working at **Oracle, Hyderabad**.
 
-- 🌱 I’m currently learning **Unit Testing with Junit and Mockito**
+- 🌱 I’m currently learning **System design**.
 
 - 👨‍💻 All of my projects are available at [https://acashsardar.github.io/ACashSardar/](https://acashsardar.github.io/ACashSardar/)
 
-- 💬 Ask me about **DSA, Java, Spring Boot, REST API**
+- 💬 Ask me about **DSA, LLD, Java, Spring Boot**
 
 - 📫 How to reach me **akashsardar383@gmail.com**
 
 - 📄 Know about my experiences [https://docs.google.com/document/d/169FM_kU6VVg12VR6AXWVm1EUvd0AtqFUFyR5BRl4V2c/edit](https://docs.google.com/document/d/169FM_kU6VVg12VR6AXWVm1EUvd0AtqFUFyR5BRl4V2c/edit)
 
-- ⚡ Fun fact **My life is boring 😔**
+- ⚡ Fun fact **Whatever happens on earth, stays on earth**.
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
