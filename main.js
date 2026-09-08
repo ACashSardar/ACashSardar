@@ -4,196 +4,171 @@ const profiles = document.getElementById("profile");
 const projectItems = document.getElementById("project-items");
 const experienceItems = document.getElementById("experience-items");
 const educationItems = document.getElementById("education-items");
-const errorMsg = document.getElementById("error-msg");
-const navBtn = document.getElementById("nav-btn");
 const myImg = document.getElementById("my-img");
 
-const colors = ["darkcyan", "lime", "orangered"];
-
-function changeNavIcon() {
-  if (navBtn.innerHTML == '<i class="fa fa-times"></i>') {
-    navBtn.innerHTML = '<i class="fa fa-bars"></i>';
-    navBtn.style.color = "white";
-  } else {
-    navBtn.innerHTML = '<i class="fa fa-times"></i>';
-    navBtn.style.color = "white";
-  }
-}
-
-function download(e) {
-  var link = document.createElement("a");
-  link.href = "./resources/Resume_Akash_Sardar.pdf";
-  link.download = "resume_Akash_Sardar.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-function changeArrow(e) {
-  if (e.innerHTML.includes("up")) {
-    e.innerHTML = `Show Details <i class="fa fa-caret-down"></i>`;
-  } else {
-    e.innerHTML = `Hide Details <i class="fa fa-caret-up"></i>`;
-  }
-}
-
+// Fetch and render Education data
 fetch("resources/education.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((edu, index) => {
+    data.forEach((edu) => {
       educationItems.innerHTML += `
-        <div class="row m-0 mb-3">
-          <div class="col-6 d-flex justify-content-center">
-              <span class="me-3">
-                <img src=${edu.logo}  class="custom-brand-logo">
-              </span>
-              <span class="text-start career-info">
-                <label class="custom-text-lg fw-bold custom-text-color">${edu.institutionName}</label>
-                <p class="custom-text-sm mb-0">${edu.degree}</p>
-                <p class="custom-text-sm mb-0">Branch: ${edu.branch}</p>
-              </span>
-          </div>
-          <div class="col-6 d-flex justify-content-center">
-            <div class="d-flex">
-              <span class="text-start career-info">
-                <label class="custom-text-lg fw-bold">${edu.location}</label>
-                <p class="custom-text-sm mb-0">${edu.duration}</p>
-                <p class="custom-text-sm mb-0">${edu.score}</p>
-              </span>
+        <article class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-brand">
+              <img src="${edu.logo}" class="brand-logo-img" alt="${edu.institutionName}">
+            </div>
+            <div>
+              <span class="timeline-duration">${edu.duration}</span>
+              <h3 class="timeline-title">${edu.institutionName}</h3>
             </div>
           </div>
-        </div>
+          <div class="timeline-body">
+            <p class="timeline-detail"><strong>Degree:</strong> ${edu.degree}</p>
+            <p class="timeline-detail"><strong>Branch:</strong> ${edu.branch}</p>
+            <p class="timeline-detail"><strong>Score:</strong> ${edu.score}</p>
+          </div>
+          <div class="timeline-footer">
+            <span class="location-tag"><i class="fa-solid fa-location-dot"></i> ${edu.location}</span>
+          </div>
+        </article>
       `;
     });
-  });
+  })
+  .catch((err) => console.error("Error loading education data:", err));
 
+// Fetch and render Experience data
 fetch("resources/experience.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((exp, index) => {
+    data.forEach((exp) => {
       experienceItems.innerHTML += `
-        <div class="row m-0 mb-3">
-          <div class="col-6 d-flex justify-content-center">
-              <span class="me-3">
-                <img src=${exp.logo}  class="custom-brand-logo">
-              </span>
-              <span class="text-start career-info">
-                <label class="custom-text-lg fw-bold custom-text-color">${exp.company}</label>
-                <p class="custom-text-sm mb-0">${exp.designation}</p>
-                <p class="custom-text-sm mb-0">Role: ${exp.role}</p>
-              </span>
-          </div>
-          <div class="col-6 d-flex justify-content-center">
-            <div class="d-flex">
-              <span class="text-start career-info">
-                <label class="custom-text-lg fw-bold">${exp.location}</label>
-                <p class="custom-text-sm mb-0">${exp.duration}</p>
-                <p class="custom-text-sm mb-0">Type: ${exp.type}</p>
-              </span>
+        <article class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-brand">
+              <img src="${exp.logo}" class="brand-logo-img" alt="${exp.company}">
+            </div>
+            <div>
+              <span class="timeline-duration">${exp.duration}</span>
+              <h3 class="timeline-title">${exp.company}</h3>
             </div>
           </div>
-        </div>
+          <div class="timeline-body">
+            <p class="timeline-detail"><strong>Position:</strong> ${exp.designation}</p>
+            <p class="timeline-detail"><strong>Core Role:</strong> ${exp.role}</p>
+            <p class="timeline-detail"><strong>Engagement:</strong> ${exp.type}</p>
+          </div>
+          <div class="timeline-footer">
+            <span class="location-tag"><i class="fa-solid fa-location-dot"></i> ${exp.location}</span>
+          </div>
+        </article>
       `;
     });
-  });
+  })
+  .catch((err) => console.error("Error loading experience data:", err));
 
+// Fetch and render Skills data
 fetch("resources/skills.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((skill, index) => {
+    data.forEach((skill) => {
       skillset.innerHTML += `
-        <div class="col-md-2 col-2" >
-          <img src="${skill.logo}" class="tech-logo" alt="">
+        <div class="skill-tile">
+          <img src="${skill.logo}" class="skill-tile-icon" alt="Tech Skill">
         </div>
       `;
     });
-  });
+  })
+  .catch((err) => console.error("Error loading skills data:", err));
 
+// Fetch and render Projects data
 fetch("resources/projects.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((project, index) => {
+    data.forEach((project) => {
+      let githubLinksHTML = "";
+      if (project.githubLink && Array.isArray(project.githubLink)) {
+        githubLinksHTML = project.githubLink
+          .map(
+            (e, index) =>
+              `<a href="${e.link}" target="_blank" rel="noopener noreferrer" class="project-gh-link">
+                <i class="fa-brands fa-github"></i> Code ${index + 1}
+              </a>`,
+          )
+          .join("");
+      }
+
       projectItems.innerHTML += `
-        <div class="col-md-4">
-          <div class="card text-light rounded-2 custom-bg-transparent p-1 mb-3">
-            <img class="rounded-top" src="${
-              project.logo
-            }" style="height: 11rem">
-            <div class="card-body text-left">
-              <p class="custom-text-xl mb-1">${project.name}</p>
-              <span class="badge rounded-0 custom-text-lg fw-light mb-2">
-                <label class="me-2">Github Link(s): </label>
-                ${project.githubLink
-                  .map(
-                    (e, index) =>
-                      `<a href=${
-                        e.link
-                      } target="_blank" class="fw-bold link-light me-2">Link${
-                        index + 1
-                      }</a>`
-                  )
-                  .join("")}
-              </span><br/>
-              <span>
-                ${
-                  project.projectDetailsLink !== ""
-                    ? `<a href=${project.projectDetailsLink} target="_blank">
-                        <button class="custom-btn">Watch Demo <i class="fa fa-youtube-play"></i></button>
-                      </a>`
-                    : `<span></span>`
-                }
-                ${
-                  project.websiteLink !== ""
-                    ? `<a href=${project.websiteLink} target="_blank">
-                        <button class="custom-btn">Visit Website <i class="fa fa-globe"></i></button>
-                      </a>`
-                    : `<span></span>`
-                }
-              </span>
+        <div class="project-card">
+          <div class="project-img-container">
+            <img class="project-card-img" src="${project.logo}" alt="${project.name}">
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-title">${project.name}</h3>
+            <div class="project-links-group">
+              ${githubLinksHTML}
+            </div>
+            <div class="project-cta-group">
+              ${
+                project.projectDetailsLink !== "" &&
+                project.projectDetailsLink != null
+                  ? `<a href="${project.projectDetailsLink}" target="_blank" rel="noopener noreferrer" class="project-btn demo-btn">
+                      <i class="fa-brands fa-youtube"></i> Demo
+                    </a>`
+                  : ``
+              }
+              ${
+                project.websiteLink !== "" && project.websiteLink != null
+                  ? `<a href="${project.websiteLink}" target="_blank" rel="noopener noreferrer" class="project-btn site-btn">
+                      <i class="fa-solid fa-globe"></i> Visit
+                    </a>`
+                  : ``
+              }
             </div>
           </div>
         </div>
-        `;
+      `;
     });
-  });
+  })
+  .catch((err) => console.error("Error loading projects data:", err));
 
+// Fetch and render Profiles data
 fetch("resources/profile.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((profile, index) => {
+    data.forEach((profile) => {
       profiles.innerHTML += `
-        <div class="col-md-2 col-4" >
-          <a href="${profile.link}" target="_blank">
-            <img src="${profile.logo}" class="profile-logo" alt="">
+        <div class="profile-tile">
+          <a href="${profile.link}" target="_blank" rel="noopener noreferrer" class="profile-tile-link">
+            <img src="${profile.logo}" class="profile-tile-icon" alt="Profile Platform">
           </a>
         </div>
       `;
     });
-  });
+  })
+  .catch((err) => console.error("Error loading profiles data:", err));
 
+// Morphing profile picture animation
 function animateMyPic() {
+  if (!myImg) return;
   let i = 30;
   let flag = true;
   let turn = 0;
   setInterval(() => {
-    if (turn == 0) {
+    if (turn === 0) {
       myImg.style.borderTopLeftRadius = `${i}%`;
       myImg.style.borderBottomRightRadius = `${i}%`;
     } else {
       myImg.style.borderBottomLeftRadius = `${i}%`;
       myImg.style.borderTopRightRadius = `${i}%`;
     }
-    // myImg.style.background = `rgb(${(i * 1) % 255} , ${(i * 1) % 255}, ${
-    //   (i * 1) % 255
-    // }, ${i})`;
 
     if (flag) {
-      if (i == 50) {
+      if (i === 50) {
         flag = !flag;
         turn = (turn + 1) % 2;
       } else i++;
     } else {
-      if (i == 30) {
+      if (i === 30) {
         flag = !flag;
       } else i--;
     }

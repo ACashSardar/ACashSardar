@@ -1,44 +1,41 @@
 [
-    {
-        "name":"Amazon clone",
-        "description":"",
-        "projectDetailsLink":"https://www.youtube.com/watch?v=cRNF0H419FE",
-        "githubLink":[
-            {
-                "link":"https://github.com/ACashSardar/E-commerce-website-Front-end.git"
-            },
-            {
-                "link":"https://github.com/ACashSardar/E-commerce-website-Back-end.git"
-            }
-        ],
-        "websiteLink":"",
-        "logo":"./images/E_commerce.png"
-
-    },
-    {
-        "name":"Travel Blog Website",
-        "description":"",
-        "projectDetailsLink":"https://www.youtube.com/watch?v=srsW0TZOCzY",
-        "githubLink":[
-            {
-                "link":"https://github.com/ACashSardar/travel-blog-spring-boot"
-            }
-        ],
-        "websiteLink":"",
-        "logo":"./images/TravelBlog.png"
-        
-    },
-    {
-        "name":"Image gallery Website",
-        "description":"",
-        "projectDetailsLink":"",
-        "githubLink":[
-            {
-                "link":"https://github.com/ACashSardar/Image-Gallery-Website"
-            }
-        ],
-        "websiteLink":"https://image-gallery-akash.netlify.app/",
-        "logo":"./images/ImageGallery.png"
-    }
-
+  {
+    "name": "Amazon clone",
+    "description": "",
+    "projectDetailsLink": "https://www.youtube.com/watch?v=cRNF0H419FE",
+    "githubLink": [
+      {
+        "link": "https://github.com/ACashSardar/E-commerce-website-Front-end.git"
+      },
+      {
+        "link": "https://github.com/ACashSardar/E-commerce-website-Back-end.git"
+      }
+    ],
+    "websiteLink": "",
+    "logo": "./images/E_commerce.png"
+  },
+  {
+    "name": "Travel Blog Website",
+    "description": "",
+    "projectDetailsLink": "https://www.youtube.com/watch?v=srsW0TZOCzY",
+    "githubLink": [
+      {
+        "link": "https://github.com/ACashSardar/travel-blog-spring-boot"
+      }
+    ],
+    "websiteLink": "",
+    "logo": "./images/TravelBlog.png"
+  },
+  {
+    "name": "RouXplorer",
+    "description": "",
+    "projectDetailsLink": "",
+    "githubLink": [
+      {
+        "link": "https://github.com/ACashSardar/RubiksCubeSolver-OpenCV.js"
+      }
+    ],
+    "websiteLink": "https://acashsardar.github.io/RubiksCubeSolver-OpenCV.js/",
+    "logo": "./images/RouxPlorer.png"
+  }
 ]

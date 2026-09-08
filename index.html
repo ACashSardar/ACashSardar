@@ -1,20 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Akash's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Akash Sardar — Software Engineer, competitive programmer and technology enthusiast."
+    />
+
+    <title>Akash Sardar | Software Engineer</title>
+
+    <!-- Font Awesome -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
     <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
     <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/128/8983/8983107.png"
@@ -23,246 +38,445 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar fixed-top p-3" id="navbar">
-      <div class="container-fluid">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a class="navbar-brand" href="#introduction">
+          <img
+            src="images/akash_name.png"
+            alt="Akash Sardar"
+            class="brand-logo"
+          />
+        </a>
+
         <button
-          class="navbar-toggler p-0 shadow-none text-white"
+          class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
           aria-label="Toggle navigation"
-          onclick="return changeNavIcon()"
+          onclick="toggleMobileMenu()"
         >
-          <span id="nav-btn"><i class="fa fa-bars text-light"></i></span>
+          <i class="fa-solid fa-bars"></i>
         </button>
-        <img src="images/akash_name.png" style="width: 100px" alt="" />
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#pre-about-me">About Me</a>
+              <a class="nav-link" href="#about-me">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-me">Education</a>
+              <a class="nav-link" href="#education">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Experience</a>
+              <a class="nav-link" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Profiles</a>
+              <a class="nav-link" href="#profiles">Profiles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#profiles">Projects</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link nav-contact" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid p-0">
-      <div id="introduction" class="mb-5">
-        <div class="row mx-0 my-desc mt-5">
-          <div class="col-md-6 d-flex justify-content-center my-pic p-1">
-            <img id="my-img" src="images/akash_sardar1.jpeg" alt="" />
-          </div>
-          <div class="col-md-6 d-flex justify-content-start p-1">
-            <div class="my-text">
-              <p class="fs-5">Hi, there👋</p>
-              <h3 class="custom-font-xl fw-bold mb-3">
-                I am
-                <label id="auto-type"> </label>
-              </h3>
-              <p>
-                <i class="fa fa-home fs-4 mx-1"></i>From Kolkata, currently in
-                Hyderabad.
-              </p>
-              <p>
-                <i class="fa fa-briefcase fs-5 ms-1"></i>
-                Application engineer-IC2 at Oracle.
-              </p>
-              <p>
-                <i class="fa fa-code fs-5 me-1"></i>Specialist @Codeforces, 4
-                <i class="fa fa-star"></i>
-                @Codechef
-              </p>
-              <p>
-                <i class="fa fa-graduation-cap fs-5"></i>Jadavpur University
-                ETCE 2022.
-              </p>
-              <span class="me-3">
-                <label class="me-3 mb-3"
-                  ><i class="fa fa-globe fs-5 mx-1"></i>Find me on:
-                </label>
-                <a
-                  href="https://www.linkedin.com/in/akash-sardar-118858184"
-                  target="_blank"
-                >
-                  <i class="fa fa-linkedin"></i>
-                </a>
-                <a href="#" target="_blank">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a
-                  href="https://www.facebook.com/akash.sardar.1717"
-                  target="_blank"
-                >
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/lazer.kitty" target="_blank">
-                  <i class="fa fa-instagram"></i>
-                </a>
-                <a
-                  href="https://docs.google.com/document/d/1aqO6c-5BeGxQnAbm8WSOnhR-Fh1mUhLQYX3OUjmpb-E"
-                  target="_blank"
-                >
-                  <button class="custom-btn">View Resume</button>
-                </a>
-              </span>
+    <main>
+      <!-- ================= HERO ================= -->
+      <section id="introduction" class="hero-section">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Profile -->
+            <div class="hero-col-img">
+              <div class="hero-image-wrapper">
+                <div class="image-ring"></div>
+
+                <img
+                  id="my-img"
+                  src="images/akash_sardar1.jpeg"
+                  alt="Portrait of Akash Sardar"
+                  class="hero-image"
+                />
+
+                <div class="floating-badge badge-one">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Software Engineer</span>
+                </div>
+
+                <div class="floating-badge badge-two">
+                  <i class="fa-solid fa-trophy"></i>
+                  <span>Competitive Programmer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Introduction -->
+            <div class="hero-col-content">
+              <div class="hero-content">
+                <span class="hero-greeting">
+                  Hi there <span class="wave">👋</span>
+                </span>
+
+                <p class="hero-intro">I'm</p>
+
+                <h1>
+                  <span id="auto-type"></span>
+                </h1>
+
+                <p class="hero-description">
+                  Software engineer passionate about building scalable
+                  applications, solving challenging problems and exploring
+                  modern technologies.
+                </p>
+
+                <div class="hero-details">
+                  <div class="hero-detail">
+                    <span class="detail-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span> From Kolkata, currently in Hyderabad </span>
+                  </div>
+
+                  <div class="hero-detail">
+                    <span class="detail-icon">
+                      <i class="fa-solid fa-briefcase"></i>
+                    </span>
+                    <span> Application Software Engineer-2 @ Oracle </span>
+                  </div>
+
+                  <div class="hero-detail">
+                    <span class="detail-icon">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+                    <span> B.E. — Jadavpur University, 2022 </span>
+                  </div>
+
+                  <div class="hero-detail">
+                    <span class="detail-icon">
+                      <i class="fa-solid fa-code"></i>
+                    </span>
+                    <span> Codeforces Specialist · CodeChef 4★ </span>
+                  </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="hero-actions">
+                  <a
+                    problems
+                    on
+                    LeetCode
+                    (Knight,
+                    Top
+                    3%)
+                    and
+                    earning
+                    competitive
+                    href="https://docs.google.com/document/d/1DG4cHVAiuyVoWwjTy-iTkLEcEg8xcsGRxe6D6NNo29o/edit?tab=t.0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary-custom"
+                  >
+                    <i class="fa-solid fa-file-lines"></i>
+                    View Resume
+                  </a>
+
+                  <a href="#projects" class="btn-outline-custom">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Explore My Work
+                  </a>
+                </div>
+
+                <!-- Socials -->
+                <div class="social-links">
+                  <span class="social-label"> Find me on </span>
+
+                  <a
+                    href="https://www.linkedin.com/in/akash-sardar-118858184"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/akash.sardar.1717"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/lazer.kitty"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div id="pre-about-me"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="about-me" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-user-o"></i> ABOUT ME
-        </span>
-        <hr />
-        <div class="d-flex justify-content-center">
-          <div class="about-info">
-            <label class="custom-text-sm" for=""
-              >Hello, I'm Akash Sardar, a passionate and dedicated software
-              engineer with a keen interest in web development and competitive
-              programming. I enjoy working on personal projects that challenge
-              my coding skills and allow me to explore new technologies. I am
-              eager to contribute to impactful projects and collaborate with
-              like-minded professionals in the tech community.</label
-            >
+      <!-- ================= ABOUT ================= -->
+      <section id="about-me" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+
+            <div>
+              <p class="section-kicker">Get to know me</p>
+              <h2>About <span>Me</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+
+            <div class="about-text-content">
+              <p>
+                Hello! I'm <strong>Akash Sardar</strong>, a Software Developer
+                with 4 years of experience building scalable backend
+                architectures and dynamic front-end enterprise platforms.
+                Currently at <strong>Oracle</strong>, I engineer cloud-based
+                Redwood solutions impacting 15M+ global users, specializing in
+                runtime UI customization and web performance optimization.
+              </p>
+
+              <p>
+                My expertise spans
+                <strong
+                  >Java, Spring Boot, gRPC, microservices, and modern web
+                  frameworks</strong
+                >. Beyond enterprise software, I have a deep passion for
+                algorithmic problem solving— demonstrated by solving 1,200+
+                problems on LeetCode (Knight, Top 3%) and earning competitive
+                programming ranks like Codeforces Specialist.
+              </p>
+
+              <p class="mb-0">
+                Whether I'm optimizing low-latency APIs, training computer
+                vision models for custom tools like <em>RouXplorer</em>, or
+                designing AI-driven full-stack applications, I thrive on turning
+                complex technical challenges into clean, high-performance
+                solutions.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="education" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-graduation-cap"></i> EDUCATION
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <div id="education-items"></div>
+      <!-- ================= EDUCATION ================= -->
+      <section id="education" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+
+            <div>
+              <p class="section-kicker">Academic journey</p>
+              <h2>My <span>Education</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="dynamic-container">
+            <div id="education-items"></div>
+          </div>
         </div>
-        <div id="pre-experience"></div>
-      </div>
+      </section>
 
-      <div id="experience" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-history"></i> EXPERIENCE
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <ul class="list-group" id="experience-items"></ul>
+      <!-- ================= EXPERIENCE ================= -->
+      <section id="experience" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">03</span>
+
+            <div>
+              <p class="section-kicker">Professional journey</p>
+              <h2>Work <span>Experience</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="dynamic-container">
+            <ul class="experience-list" id="experience-items"></ul>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="skills" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-gears"></i> SKILLS
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <div class="row m-0" id="skillset"></div>
+      <!-- ================= SKILLS ================= -->
+      <section id="skills" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">04</span>
+
+            <div>
+              <p class="section-kicker">What I work with</p>
+              <h2>Technical <span>Skills</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="grid-container" id="skillset"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="profiles" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-code"></i> MY PROFILES
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <div class="row m-0" id="profile"></div>
+      <!-- ================= PROFILES ================= -->
+      <section id="profiles" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">05</span>
+
+            <div>
+              <p class="section-kicker">Competitive programming</p>
+              <h2>My <span>Profiles</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="grid-container" id="profile"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="projects" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-laptop"></i> PROJECTS
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <div class="row m-0 p-3" id="project-items"></div>
+      <!-- ================= PROJECTS ================= -->
+      <section id="projects" class="portfolio-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-number">06</span>
+
+            <div>
+              <p class="section-kicker">Things I've built</p>
+              <h2>Featured <span>Projects</span></h2>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="grid-container" id="project-items"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="contact" class="text-center align-center my-5">
-        <span
-          class="bg-span py-2 px-3 rounded-2 fg-span custom-text-xl fw-bold"
-        >
-          <i class="fa fa-envelope-o"></i> CONTACT
-        </span>
-        <hr />
-        <div class="custom-margin">
-          <div class="row m-0">
-            <div class="col-md-4 custom-text-lg fw-bold">
-              <i class="fa fa-linkedin"></i>
+      <!-- ================= CONTACT ================= -->
+      <section id="contact" class="portfolio-section contact-section">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-content">
+              <span class="section-kicker"> Have a project in mind? </span>
+
+              <h2>
+                Let's build something
+                <span>awesome.</span>
+              </h2>
+
+              <p>
+                I'm always open to discussing interesting projects,
+                opportunities and ideas.
+              </p>
+            </div>
+
+            <div class="contact-details">
+              <a href="mailto:akashsardar383@gmail.com" class="contact-item">
+                <span class="contact-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+
+                <span>
+                  <small>Email</small>
+                  akashsardar383@gmail.com
+                </span>
+              </a>
+
+              <a href="tel:+918582855218" class="contact-item">
+                <span class="contact-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+
+                <span>
+                  <small>Phone</small>
+                  +91 8582855218
+                </span>
+              </a>
+
               <a
-                class="link-light"
                 href="https://www.linkedin.com/in/akash-sardar-118858184/"
                 target="_blank"
-                >LinkedIn</a
+                rel="noopener noreferrer"
+                class="contact-item"
               >
-            </div>
-            <div class="col-md-4 custom-text-lg fw-bold">
-              <i class="fa fa-phone"></i> +91 8582855218
-            </div>
-            <div class="col-md-4 custom-text-lg fw-bold">
-              <i class="fa fa-envelope"></i> akashsardar383@gmail.com
+                <span class="contact-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </span>
+
+                <span>
+                  <small>Connect</small>
+                  LinkedIn
+                </span>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <footer class="mt-5 custom-text-lg">
-      <p>Copywright &copy; Akash Sardar, 2022</p>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <span> © 2026 Akash Sardar </span>
+
+          <span class="footer-divider">•</span>
+
+          <span>
+            Built with <i class="fa-solid fa-code"></i> and curiosity.
+          </span>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Load library from the CDN -->
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <!-- Setup and start animation! -->
     <script>
-      var typed = new Typed("#auto-type", {
-        strings: ["Akash Sardar", "a software engineer", "a tech enthusiast"],
-        typeSpeed: 50,
+      const typed = new Typed("#auto-type", {
+        strings: [
+          "Akash Sardar",
+          "a Software Engineer",
+          "a Tech Enthusiast",
+          "a Problem Solver",
+        ],
+        typeSpeed: 55,
+        backSpeed: 30,
+        backDelay: 1500,
         loop: true,
       });
+
+      function toggleMobileMenu() {
+        const navCollapse = document.getElementById("navbarSupportedContent");
+        navCollapse.classList.toggle("show");
+      }
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="main.js"></script>
   </body>
